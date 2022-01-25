@@ -39,6 +39,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
     console.log(this.props.profileName1);
 
+   
+
     try {
       // Set Image URL received from the file picker component--->
       const myObj1 = (this.props.filePickerResult1);
@@ -73,8 +75,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName1}</h2>
-                        <h3>{this.props.profileDesignation1}</h3>
-                        <h3>{this.props.description1}</h3>
+                        <h3 >{this.props.profileDesignation1}</h3>
+                        <h3 >{this.props.description1}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
