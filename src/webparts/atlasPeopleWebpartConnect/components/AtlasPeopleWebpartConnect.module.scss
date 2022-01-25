@@ -1,5 +1,5 @@
 @import "~office-ui-fabric-react/dist/sass/References.scss";
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 @media screen and (min-width: 1024px) {
     .a_c_50a7110f:not(.b_c_50a7110f) .l_c_50a7110f {
@@ -8,19 +8,19 @@
 }
 
 :global(#workbenchPageContent) {
-    font-family: 'Oswald' !important;
-    
+    font-family: "Oswald" !important;
+
     max-width: initial;
 }
 
 :global(.CanvasZone > div) {
-    font-family: 'Oswald' !important;
+    font-family: "Oswald" !important;
 
     width: 100%;
 }
 
 .atlasPeopleWebpartConnect {
-    font-family: 'Oswald' !important;
+    font-family: "Oswald" !important;
 
     .container .box {
         // width: 540px;
@@ -159,13 +159,30 @@
         bottom: 0px !important;
     }
 
-    h2{
+    h2 {
         font-size: 25px;
-        margin-top: 10px;      
+        margin-top: 10px;
     }
 
     h3 {
         font-size: 20px;
         margin-top: 70px;
     }
+}
+.peoplePhoto {
+    width: 250px;
+    height: 260px;
+    padding: 15px;
+    border: 3px solid #555;
+}
+.subTitle {
+    // @include ms-font-l;
+    // @include ms-fontColor-white;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.description {
+    @include ms-font-l;
+    // @include ms-fontColor-white;
 }

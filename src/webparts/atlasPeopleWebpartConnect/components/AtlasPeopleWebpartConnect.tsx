@@ -37,6 +37,7 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
 */
 export interface IAtlasPeopleWebpartConnectState {
   showDescriptionModal: boolean;
+  currentDataset: any;
 }
 
 
@@ -45,36 +46,67 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
   public constructor(props: IAtlasPeopleWebpartConnectProps) {
     super(props);
     this.state = ({
-      showDescriptionModal: false
-    })
-    this.modalCloseHandler = this.modalCloseHandler.bind(this);
+      showDescriptionModal: false,
+      currentDataset: []
 
-  }
-
-  // @autobind
-  modalCloseHandler = data => {
-    console.log(data);
-    this.setState({
-      showDescriptionModal: false
     })
   }
 
-  // openModal = () => this.setState({ isOpen: true });
-  // closeModal = () => this.setState({ isOpen: false });
   @autobind
-  openModal() {
-    console.log("I am called mama");
-    // const spContext: WebPartContext = this.props.context;
-    this.setState({
-      showDescriptionModal: true,
-    });
-    console.log(this.state.showDescriptionModal);
+  async openModal(id: number) {
+    console.log(id)
+    let dataset = [];
+    // this.setState({ showDescriptionModal: true });
+    switch (id) {
+      case 1:
+        dataset.push(this.props.profileName1, this.props.profileDesignation1, this.props.filePickerResult1, this.props.description1);
+        await this.setState({
+          currentDataset: dataset,
+          showDescriptionModal: true
+        })
+        break;
+
+      case 2:
+        dataset.push(this.props.profileName2, this.props.profileDesignation2, this.props.filePickerResult2, this.props.description2);
+        await this.setState({
+          currentDataset: dataset,
+          showDescriptionModal: true
+        })
+        break;
+      case 3:
+        dataset.push(this.props.profileName3, this.props.profileDesignation3, this.props.filePickerResult3, this.props.description3);
+        await this.setState({
+          currentDataset: dataset,
+          showDescriptionModal: true
+        })
+        break;
+      case 4:
+        dataset.push(this.props.profileName4, this.props.profileDesignation4, this.props.filePickerResult4, this.props.description4);
+        await this.setState({
+          currentDataset: dataset,
+          showDescriptionModal: true
+        })
+        break;
+      case 5:
+        dataset.push(this.props.profileName5, this.props.profileDesignation5, this.props.filePickerResult5, this.props.description5);
+        await this.setState({
+          currentDataset: dataset,
+          showDescriptionModal: true
+        })
+        break;
+      default:
+        break;
+    }
+    console.log(this.state.currentDataset)
   }
+
+  @autobind
+  closeModal() { this.setState({ showDescriptionModal: false }); }
 
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
     // console.log(this.props.profileName1);
 
-   
+
 
     try {
       // Set Image URL received from the file picker component--->
@@ -96,7 +128,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
     return (
       <div className={styles.atlasPeopleWebpartConnect}>
         {/* <div className="container-fluid"> */}
-        <div onClick={this.openModal}>abcd</div>
+        {/* <div onClick={this.openModal}>abcd</div> */}
         <Container fluid>
           {/* <div className={styles.container}> */}
           <div className={styles.box}>
@@ -107,7 +139,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                 <Col className={styles.myColl} lg>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
-                    <div className={styles.card} onClick={this.openModal}>
+                    <div className={styles.card} onClick={() => this.openModal(1)}>
                       <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
                         <h3 >{this.props.profileDesignation1}</h3>
@@ -123,12 +155,12 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                   {/* </div> */}
                 </Col>
-                : 
+                :
                 <Col className={styles.myColl} lg>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
-                    
+
                       <div className={styles.image}>  </div>
 
                     </div>
@@ -137,15 +169,15 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                   {/* </div> */}
                 </Col>
-                              
-                }
+
+              }
 
 
               {this.props.profileName2 != null && this.props.profileName2 != "" ?
                 // <div className={styles['box-cell']} >
                 <Col className={styles.myColl} lg>
                   <div className={styles.wrapper}>
-                    <div className={styles.card}>
+                    <div className={styles.card} onClick={() => this.openModal(2)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName2}</h2>
                         <h3>{this.props.profileDesignation2}</h3>
@@ -162,28 +194,28 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                   {/* </div> */}
                 </Col >
-                : 
+                :
                 <Col className={styles.myColl} lg>
-                {/* <di v className={styles['box-cell']}> */}
-                <div className={styles.wrapper}>
-                  <div className={styles.card2}>
-                  
-                    <div className={styles.image}>  </div>
+                  {/* <di v className={styles['box-cell']}> */}
+                  <div className={styles.wrapper}>
+                    <div className={styles.card2}>
+
+                      <div className={styles.image}>  </div>
+
+                    </div>
 
                   </div>
 
-                </div>
-
-                {/* </div> */}
-              </Col>
-                }
+                  {/* </div> */}
+                </Col>
+              }
 
 
               {this.props.profileName3 != null && this.props.profileName3 != "" ?
                 // <div className={styles['box-cell']} >
                 <Col className={styles.myColl} lg>
                   <div className={styles.wrapper}>
-                    <div className={styles.card}>
+                    <div className={styles.card} onClick={() => this.openModal(3)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName3}</h2>
                         <h3>{this.props.profileDesignation3}</h3>
@@ -196,27 +228,27 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : 
+                :
                 <Col className={styles.myColl} lg>
-                {/* <di v className={styles['box-cell']}> */}
-                <div className={styles.wrapper}>
-                  <div className={styles.card2}>
-                  
-                    <div className={styles.image}>  </div>
+                  {/* <di v className={styles['box-cell']}> */}
+                  <div className={styles.wrapper}>
+                    <div className={styles.card2}>
+
+                      <div className={styles.image}>  </div>
+
+                    </div>
 
                   </div>
 
-                </div>
-
-                {/* </div> */}
-              </Col>
-                }
+                  {/* </div> */}
+                </Col>
+              }
 
               {this.props.profileName4 != null && this.props.profileName4 != "" ?
                 // <div className={styles['box-cell']} >
                 <Col className={styles.myColl} lg>
                   <div className={styles.wrapper}>
-                    <div className={styles.card}>
+                    <div className={styles.card} onClick={() => this.openModal(4)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName4}</h2>
                         <h3>{this.props.profileDesignation4}</h3>
@@ -230,28 +262,28 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : 
+                :
                 <Col className={styles.myColl} lg>
-                {/* <di v className={styles['box-cell']}> */}
-                <div className={styles.wrapper}>
-                  <div className={styles.card2}>
-                  
-                    <div className={styles.image}>  </div>
+                  {/* <di v className={styles['box-cell']}> */}
+                  <div className={styles.wrapper}>
+                    <div className={styles.card2}>
+
+                      <div className={styles.image}>  </div>
+
+                    </div>
 
                   </div>
 
-                </div>
-
-                {/* </div> */}
-              </Col>
-                }
+                  {/* </div> */}
+                </Col>
+              }
 
               {this.props.profileName5 != null && this.props.profileName5 != "" ?
                 // <div className={styles['box-cell']} >
                 <Col className={styles.myColl} lg>
 
                   <div className={styles.wrapper}>
-                    <div className={styles.card}>
+                    <div className={styles.card} onClick={() => this.openModal(5)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName5}</h2>
                         <h3>{this.props.profileDesignation5}</h3>
@@ -265,21 +297,21 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : 
+                :
                 <Col className={styles.myColl} lg>
-                {/* <di v className={styles['box-cell']}> */}
-                <div className={styles.wrapper}>
-                  <div className={styles.card2}>
-                  
-                    <div className={styles.image}>  </div>
+                  {/* <di v className={styles['box-cell']}> */}
+                  <div className={styles.wrapper}>
+                    <div className={styles.card2}>
+
+                      <div className={styles.image}>  </div>
+
+                    </div>
 
                   </div>
 
-                </div>
-
-                {/* </div> */}
-              </Col>
-                }
+                  {/* </div> */}
+                </Col>
+              }
 
 
             </Row>
@@ -289,7 +321,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
           </div>
           {this.state.showDescriptionModal == true ?
-            <DescriptionModal onClose={this.modalCloseHandler} ></DescriptionModal>
+            <DescriptionModal onClose={this.closeModal} dataset={this.state.currentDataset} ></DescriptionModal>
             :
             null
           }
