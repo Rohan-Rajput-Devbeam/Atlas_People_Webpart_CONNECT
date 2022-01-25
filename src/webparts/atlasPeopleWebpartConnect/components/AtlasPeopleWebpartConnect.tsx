@@ -74,6 +74,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
     // console.log(this.props.profileName1);
 
+   
+
     try {
       // Set Image URL received from the file picker component--->
       const myObj1 = (this.props.filePickerResult1);
@@ -108,8 +110,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={this.openModal}>
                       <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
-                        <h3>{this.props.profileDesignation1}</h3>
-                        <h3>{this.props.description1}</h3>
+                        <h3 >{this.props.profileDesignation1}</h3>
+                        <h3 >{this.props.description1}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -121,7 +123,22 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                   {/* </div> */}
                 </Col>
-                : null}
+                : 
+                <Col className={styles.myColl} lg>
+                  {/* <di v className={styles['box-cell']}> */}
+                  <div className={styles.wrapper}>
+                    <div className={styles.card2}>
+                    
+                      <div className={styles.image}>  </div>
+
+                    </div>
+
+                  </div>
+
+                  {/* </div> */}
+                </Col>
+                              
+                }
 
 
               {this.props.profileName2 != null && this.props.profileName2 != "" ?
@@ -145,7 +162,21 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                   {/* </div> */}
                 </Col >
-                : null}
+                : 
+                <Col className={styles.myColl} lg>
+                {/* <di v className={styles['box-cell']}> */}
+                <div className={styles.wrapper}>
+                  <div className={styles.card2}>
+                  
+                    <div className={styles.image}>  </div>
+
+                  </div>
+
+                </div>
+
+                {/* </div> */}
+              </Col>
+                }
 
 
               {this.props.profileName3 != null && this.props.profileName3 != "" ?
@@ -165,7 +196,21 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : ""}
+                : 
+                <Col className={styles.myColl} lg>
+                {/* <di v className={styles['box-cell']}> */}
+                <div className={styles.wrapper}>
+                  <div className={styles.card2}>
+                  
+                    <div className={styles.image}>  </div>
+
+                  </div>
+
+                </div>
+
+                {/* </div> */}
+              </Col>
+                }
 
               {this.props.profileName4 != null && this.props.profileName4 != "" ?
                 // <div className={styles['box-cell']} >
@@ -185,7 +230,21 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : ""}
+                : 
+                <Col className={styles.myColl} lg>
+                {/* <di v className={styles['box-cell']}> */}
+                <div className={styles.wrapper}>
+                  <div className={styles.card2}>
+                  
+                    <div className={styles.image}>  </div>
+
+                  </div>
+
+                </div>
+
+                {/* </div> */}
+              </Col>
+                }
 
               {this.props.profileName5 != null && this.props.profileName5 != "" ?
                 // <div className={styles['box-cell']} >
@@ -206,7 +265,21 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   </div>
                   {/* </div> */}
                 </Col>
-                : ""}
+                : 
+                <Col className={styles.myColl} lg>
+                {/* <di v className={styles['box-cell']}> */}
+                <div className={styles.wrapper}>
+                  <div className={styles.card2}>
+                  
+                    <div className={styles.image}>  </div>
+
+                  </div>
+
+                </div>
+
+                {/* </div> */}
+              </Col>
+                }
 
 
             </Row>
