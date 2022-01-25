@@ -3,10 +3,12 @@ import styles from './AtlasPeopleWebpartConnect.module.scss';
 import { IAtlasPeopleWebpartConnectProps } from './IAtlasPeopleWebpartConnectProps';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import autobind from 'autobind-decorator';
+import { DescriptionModal } from './DescriptionModal';
 
 
 
-
+/*
 export interface IAtlasPeopleWebpartConnectWebPartProps {
   description1: any;
   description2: any;
@@ -32,12 +34,45 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   profileName4: any;
   profileName5: any;
 }
+*/
+export interface IAtlasPeopleWebpartConnectState {
+  showDescriptionModal: boolean;
+}
 
 
+export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeopleWebpartConnectProps, IAtlasPeopleWebpartConnectState> {
 
-export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeopleWebpartConnectProps, {}> {
+  public constructor(props: IAtlasPeopleWebpartConnectProps) {
+    super(props);
+    this.state = ({
+      showDescriptionModal: false
+    })
+    this.modalCloseHandler = this.modalCloseHandler.bind(this);
+
+  }
+
+  // @autobind
+  modalCloseHandler = data => {
+    console.log(data);
+    this.setState({
+      showDescriptionModal: false
+    })
+  }
+
+  // openModal = () => this.setState({ isOpen: true });
+  // closeModal = () => this.setState({ isOpen: false });
+  @autobind
+  openModal() {
+    console.log("I am called mama");
+    // const spContext: WebPartContext = this.props.context;
+    this.setState({
+      showDescriptionModal: true,
+    });
+    console.log(this.state.showDescriptionModal);
+  }
+
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
-    console.log(this.props.profileName1);
+    // console.log(this.props.profileName1);
 
     try {
       // Set Image URL received from the file picker component--->
@@ -53,14 +88,14 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
       var image5 = myObj5.fileAbsoluteUrl;
     }
     catch (err) {
+      // console.error(err);
 
     }
-
-
     return (
       <div className={styles.atlasPeopleWebpartConnect}>
         {/* <div className="container-fluid"> */}
-          <Container fluid>
+        <div onClick={this.openModal}>abcd</div>
+        <Container fluid>
           {/* <div className={styles.container}> */}
           <div className={styles.box}>
             {/* <div className={styles['box-row']}> */}
@@ -70,8 +105,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                 <Col className={styles.myColl} lg>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
-                    <div className={styles.card}>
-                      <div className={styles.aboutpeople} >
+                    <div className={styles.card} onClick={this.openModal}>
+                      <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
                         <h3>{this.props.profileDesignation1}</h3>
                         <h3>{this.props.description1}</h3>
@@ -180,7 +215,13 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
 
           </div>
-        
+          {this.state.showDescriptionModal == true ?
+            <DescriptionModal onClose={this.modalCloseHandler} ></DescriptionModal>
+            :
+            null
+          }
+
+
         </Container>
 
       </div>
