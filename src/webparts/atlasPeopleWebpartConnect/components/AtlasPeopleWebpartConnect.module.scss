@@ -170,10 +170,11 @@
     }
 }
 .peoplePhoto {
-    width: 250px;
-    height: 260px;
-    padding: 15px;
-    border: 3px solid #555;
+    width: 200px;
+    height: 250px;
+    padding: 0;
+   // border: 3px solid #555;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .subTitle {
     // @include ms-font-l;
@@ -185,4 +186,25 @@
 .description {
     @include ms-font-l;
     // @include ms-fontColor-white;
+}
+
+.readMore{
+    //content: "Read more";
+    color: #CC0A0A;
+    left: 30%;
+    position: absolute;
+    bottom: -7px;
+    cursor: pointer;
+}
+
+.readMore:hover{
+    color: #a50a0a;
+    font-size: large;
+}
+
+.modalHeader{
+    padding:10px !important;
+    background-color: #cc0a0a;
+    color:#fff;
+
 }

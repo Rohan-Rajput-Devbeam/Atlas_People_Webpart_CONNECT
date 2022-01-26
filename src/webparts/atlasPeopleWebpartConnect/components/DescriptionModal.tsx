@@ -2,6 +2,7 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
 import styles from './AtlasPeopleWebpartConnect.module.scss';
+import {ReadMore} from './ReadMore';
 
 export class DescriptionModal extends React.Component<any, any> {
 
@@ -29,15 +30,15 @@ export class DescriptionModal extends React.Component<any, any> {
         return (
             // <h3></h3>
             <>
-                <Modal show={this.state.isOpen} onHide={this.closeModal} backdrop="static" keyboard={false} size="lg">
-                    <Modal.Header closeButton>
+                <Modal show={this.state.isOpen} onHide={this.closeModal} keyboard={false} size="lg">
+                    <Modal.Header className={styles.modalHeader} closeButton>
                         <Modal.Title>{this.props.dataset[0]}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Container>
                             <Row>
                                 {/* Stack the columns on mobile by making one full-width and the other half-width */}
-                                <Col col="sm md-4">
+                                <Col md={4}>
                                     <Card style={{ width: '18rem', border: 'none' }}>
                                         {/* <Card.Body style={{padding: 0, 'padding-left': '8%'}}> */}
                                         <Card.Body style={{ padding: '1%' }}>
@@ -47,11 +48,13 @@ export class DescriptionModal extends React.Component<any, any> {
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                <Col col="sm md-8" style={{ padding: '20px' }}>
+                                <Col md={8} style={{ padding: '20px' }}>
                                     {/* <span className={styles.title}>{programDetail.title}</span> */}
                                     <h3>{this.props.dataset[0]}</h3>
                                     <p className={styles.subTitle}>{this.props.dataset[1]}</p>
-                                    <p className={styles.description}>{this.props.dataset[3]}</p>
+                                    <p className={styles.description}>
+                                        <ReadMore>{this.props.dataset[3]}
+                                        </ReadMore></p>
                                 </Col></Row></Container>
 
                     </Modal.Body>
