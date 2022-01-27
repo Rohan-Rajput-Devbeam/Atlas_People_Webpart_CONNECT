@@ -17,6 +17,19 @@ export class ReadMore extends React.Component<any, any> {
             isReadMore: !this.state.isReadMore
         });
     }
+    sliceStringWithWords = (inputString, limit) => {
+        const newTitle = [];
+        if (inputString.length > limit) {
+            inputString.split(' ').reduce((acc, cur) => {
+                if (acc + cur.length <= limit) {
+                    newTitle.push(cur);
+                }
+                return acc + cur.length;
+            }, 0);
+        }
+
+        return `${newTitle.join(' ')} ...`
+    }
     public render() {
         let text = this.props.children.toString();
         console.log(text)
@@ -24,7 +37,10 @@ export class ReadMore extends React.Component<any, any> {
         return (
             <p className="text">
                 {/* abcd */}
-                {this.state.isReadMore ? text.slice(0, 150) : text}
+                {this.state.isReadMore ? 
+                // text.slice(0, 150) 
+                this.sliceStringWithWords(text,150)
+                : text}
                 {text.length > 150 ?
                     <div onClick={this.toggleReadMore} className={styles.readMore}>
                         {this.state.isReadMore ? "Read more" : "Read less"}

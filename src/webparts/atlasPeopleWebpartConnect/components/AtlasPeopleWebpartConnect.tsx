@@ -103,6 +103,20 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
   @autobind
   closeModal() { this.setState({ showDescriptionModal: false }); }
 
+  sliceStringWithWords = (inputString, limit) => {
+    const newTitle = [];
+    if (inputString.length > limit) {
+        inputString.split(' ').reduce((acc, cur) => {
+            if (acc + cur.length <= limit) {
+                newTitle.push(cur);
+            }
+            return acc + cur.length;
+        }, 0);
+    }
+
+    return newTitle.join(' ')
+}
+
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
     // console.log(this.props.profileName1);
 
@@ -143,7 +157,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                       <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
                         <h3 >{this.props.profileDesignation1}</h3>
-                        <h3 >{this.props.description1}</h3>
+                        <h3 >{this.sliceStringWithWords(this.props.description1,150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -181,7 +195,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName2}</h2>
                         <h3>{this.props.profileDesignation2}</h3>
-                        <h3>{this.props.description2}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description2,150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -219,7 +233,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName3}</h2>
                         <h3>{this.props.profileDesignation3}</h3>
-                        <h3>{this.props.description3}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description3,150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -252,7 +266,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName4}</h2>
                         <h3>{this.props.profileDesignation4}</h3>
-                        <h3>{this.props.description4}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description4,150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -287,7 +301,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName5}</h2>
                         <h3>{this.props.profileDesignation5}</h3>
-                        <h3>{this.props.description5}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description5,150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
