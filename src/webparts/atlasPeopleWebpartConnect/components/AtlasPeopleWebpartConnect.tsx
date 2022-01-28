@@ -105,6 +105,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
   sliceStringWithWords = (inputString, limit) => {
     const newTitle = [];
+    if(!inputString){
+      return inputString;
+    }
     if (inputString.length > limit) {
         inputString.split(' ').reduce((acc, cur) => {
             if (acc + cur.length <= limit) {
@@ -144,6 +147,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
         {/* <div className="container-fluid"> */}
         {/* <div onClick={this.openModal}>abcd</div> */}
         <Container fluid>
+          <p>{this.props.htmlCode1}</p>
+          {/* <div dangerouslySetInnerHTML={{ __html: this.props.htmlCode1 }} /> */}
           {/* <div className={styles.container}> */}
           <div className={styles.box}>
             {/* <div className={styles['box-row']}> */}

@@ -19,6 +19,9 @@ export class ReadMore extends React.Component<any, any> {
     }
     sliceStringWithWords = (inputString, limit) => {
         const newTitle = [];
+        if(!inputString || inputString == null || inputString==""){
+            return inputString;
+        }
         if (inputString.length > limit) {
             inputString.split(' ').reduce((acc, cur) => {
                 if (acc + cur.length <= limit) {
@@ -31,7 +34,7 @@ export class ReadMore extends React.Component<any, any> {
         return `${newTitle.join(' ')} ...`
     }
     public render() {
-        let text = this.props.children.toString();
+        let text = this.props.children ? this.props.children.toString() : "";
         console.log(text)
 
         return (

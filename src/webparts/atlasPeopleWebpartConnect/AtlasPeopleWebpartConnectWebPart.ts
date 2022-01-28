@@ -14,7 +14,7 @@ import { IAtlasPeopleWebpartConnectProps } from './components/IAtlasPeopleWebpar
 
 import { PropertyFieldFilePicker, IPropertyFieldFilePickerProps, IFilePickerResult } from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
 
-
+import { PropertyFieldCodeEditor, PropertyFieldCodeEditorLanguages } from '@pnp/spfx-property-controls/lib/PropertyFieldCodeEditor';
 
 export interface IAtlasPeopleWebpartConnectWebPartProps {
   description1: any;
@@ -41,6 +41,8 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   profileName3: any;
   profileName4: any;
   profileName5: any;
+
+  htmlCode1: any;
 
 
 }
@@ -73,7 +75,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         filePickerResult2: this.properties.filePickerResult2,
         filePickerResult3: this.properties.filePickerResult3,
         filePickerResult4: this.properties.filePickerResult4,
-        filePickerResult5: this.properties.filePickerResult5
+        filePickerResult5: this.properties.filePickerResult5,
+
+        htmlCode1 : this.properties.htmlCode1
       }
     );
 
@@ -119,6 +123,21 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   key: "filePickerId",
                   buttonLabel: "File Picker",
                   label: "File Picker",
+                }),
+                PropertyFieldCodeEditor('htmlCode', {
+                  label: 'Edit HTML Code',
+                  panelTitle: 'Edit HTML Code',
+                  initialValue: this.properties.htmlCode1,
+                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+                  properties: this.properties,
+                  disabled: false,
+                  key: 'codeEditorFieldId',
+                  language: PropertyFieldCodeEditorLanguages.HTML,
+                  options: {
+                    wrap: true,
+                    fontSize: 20,
+                    // more options
+                  }
                 })
 
 

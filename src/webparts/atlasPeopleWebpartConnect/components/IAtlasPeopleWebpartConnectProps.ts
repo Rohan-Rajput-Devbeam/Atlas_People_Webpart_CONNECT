@@ -23,4 +23,6 @@ export interface IAtlasPeopleWebpartConnectProps {
   profileName3:any;
   profileName4:any;
   profileName5:any;
+
+  htmlCode1 : any;
 }
