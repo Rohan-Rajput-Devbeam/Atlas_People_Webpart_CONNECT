@@ -50,16 +50,16 @@ export class DescriptionModal extends React.Component<any, any> {
                                     </Card>
                                     <br />
                                     <Row>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="twitter" iconColor="#1DA1F2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="linkedin" iconColor="#0077b5" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="facebook" iconColor="#4267B2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="youtube-play" iconColor="#FF0000" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
                                     </Row>
