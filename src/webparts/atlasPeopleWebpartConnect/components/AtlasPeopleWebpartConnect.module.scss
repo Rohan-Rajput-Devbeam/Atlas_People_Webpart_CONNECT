@@ -4,7 +4,11 @@
 @media screen and (min-width: 1024px) {
     .a_c_50a7110f:not(.b_c_50a7110f) .l_c_50a7110f {
         max-width: 1643px;
+        // max-width: 2000px;
     }
+    // .myColl{
+    //     max-width: 20% !important;
+    // }
 }
 
 :global(#workbenchPageContent) {
@@ -17,6 +21,10 @@
     font-family: "Oswald" !important;
 
     width: 100%;
+}
+
+:global(.row){
+    margin: 0 !important;
 }
 
 .atlasPeopleWebpartConnect {
@@ -74,12 +82,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 280px;
     }
 
     .myColl {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        // padding-left: 0 !important;
+        // padding-right: 0 !important;
         padding-top: 10px;
+        // max-width: 20%;
     }
 
     .myRow {
@@ -88,7 +98,8 @@
 
     .card2 {
         height: 420px;
-        width: 320px;
+        // width: 320px;
+        width: 100%;
         background-color: #fff;
         border-radius: 10px;
         position: relative;
@@ -98,7 +109,8 @@
 
     .card {
         height: 420px;
-        width: 320px;
+        max-width: 320px;
+        width: 100%;
         background-color: #ccc;
         border-radius: 10px;
         position: relative;
@@ -150,7 +162,9 @@
         left: 0;
         transition: 0.2s ease-in;
         background-color: rgba(0, 0, 0, 0.6);
-        width: 320px;
+        // width: 320px;
+        max-width: 280px;
+        width: 100% !important;
         height: 420px;
         z-index: 1;
     }
@@ -170,7 +184,7 @@
     }
 }
 .peoplePhoto {
-    width: 200px;
+    width: 215px;
     height: 250px;
     padding: 0;
    // border: 3px solid #555;

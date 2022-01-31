@@ -105,20 +105,20 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
   sliceStringWithWords = (inputString, limit) => {
     const newTitle = [];
-    if(!inputString){
+    if (!inputString) {
       return inputString;
     }
     if (inputString.length > limit) {
-        inputString.split(' ').reduce((acc, cur) => {
-            if (acc + cur.length <= limit) {
-                newTitle.push(cur);
-            }
-            return acc + cur.length;
-        }, 0);
+      inputString.split(' ').reduce((acc, cur) => {
+        if (acc + cur.length <= limit) {
+          newTitle.push(cur);
+        }
+        return acc + cur.length;
+      }, 0);
     }
 
     return newTitle.join(' ')
-}
+  }
 
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
     // console.log(this.props.profileName1);
@@ -153,16 +153,16 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
           <div className={styles.box}>
             {/* <div className={styles['box-row']}> */}
 
-            <Row className={styles.myRow}>
+            <Row  row-cols-5>
               {this.props.profileName1 != null && this.props.profileName1 != "" ?
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(1)}>
                       <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
                         <h3 >{this.props.profileDesignation1}</h3>
-                        <h3 >{this.sliceStringWithWords(this.props.description1,150)}</h3>
+                        <h3 >{this.sliceStringWithWords(this.props.description1, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -175,7 +175,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col>
                 :
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
@@ -194,13 +194,13 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
               {this.props.profileName2 != null && this.props.profileName2 != "" ?
                 // <div className={styles['box-cell']} >
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(2)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName2}</h2>
                         <h3>{this.props.profileDesignation2}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description2,150)}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description2, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -214,7 +214,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col >
                 :
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
@@ -232,13 +232,13 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
               {this.props.profileName3 != null && this.props.profileName3 != "" ?
                 // <div className={styles['box-cell']} >
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(3)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName3}</h2>
                         <h3>{this.props.profileDesignation3}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description3,150)}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description3, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -248,7 +248,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col>
                 :
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
@@ -265,13 +265,13 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
               {this.props.profileName4 != null && this.props.profileName4 != "" ?
                 // <div className={styles['box-cell']} >
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(4)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName4}</h2>
                         <h3>{this.props.profileDesignation4}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description4,150)}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description4, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -282,7 +282,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col>
                 :
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
@@ -299,14 +299,14 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
               {this.props.profileName5 != null && this.props.profileName5 != "" ?
                 // <div className={styles['box-cell']} >
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
 
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(5)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName5}</h2>
                         <h3>{this.props.profileDesignation5}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description5,150)}</h3>
+                        <h3>{this.sliceStringWithWords(this.props.description5, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -317,7 +317,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col>
                 :
-                <Col className={styles.myColl} lg>
+                <Col className={styles.myColl} lg md={6}>
                   {/* <di v className={styles['box-cell']}> */}
                   <div className={styles.wrapper}>
                     <div className={styles.card2}>
