@@ -259,7 +259,7 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Name:",
                 }),
                 PropertyPaneTextField('profileDesignation5', {
-                  label: "Designation:",
+                  label: "Role:",
                 }),
                 PropertyPaneTextField('description5', {
                   label: "Description:",
