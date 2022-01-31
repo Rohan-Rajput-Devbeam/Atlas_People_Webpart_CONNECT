@@ -39,7 +39,7 @@ export class DescriptionModal extends React.Component<any, any> {
                         <Container>
                             <Row>
                                 {/* Stack the columns on mobile by making one full-width and the other half-width */}
-                                <Col md={4}>
+                                <Col lg={4}>
                                     <Card style={{ width: '18rem', border: 'none' }}>
                                         {/* <Card.Body style={{padding: 0, 'padding-left': '8%'}}> */}
                                         <Card.Body style={{ padding: '1%' }}>
@@ -65,7 +65,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                     </Row>
                                 </Col>
 
-                                <Col md={8} style={{ padding: '20px' }}>
+                                <Col lg={8} style={{ padding: '20px' }}>
                                     {/* <span className={styles.title}>{programDetail.title}</span> */}
                                     <h3>{this.props.dataset[0]}</h3>
                                     <p className={styles.subTitle}>{this.props.dataset[1]}</p>
