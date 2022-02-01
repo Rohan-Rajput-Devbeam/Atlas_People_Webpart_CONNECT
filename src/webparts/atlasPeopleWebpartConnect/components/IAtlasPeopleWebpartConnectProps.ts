@@ -45,4 +45,40 @@ export interface IAtlasPeopleWebpartConnectProps {
   collectionData4: any[];
   collectionData5: any[];
 
+  fb1: any;
+  fb2: any;
+  fb3: any;
+  fb4: any;
+  fb5: any;
+
+  insta1: any;
+  insta2: any;
+  insta3: any;
+  insta4: any;
+  insta5: any;
+
+  twitter1: any;
+  twitter2: any;
+  twitter3: any;
+  twitter4: any;
+  twitter5: any;
+
+  yt1:any;
+  yt2:any;
+  yt3:any;
+  yt4:any;
+  yt5:any;
+
+  linkedIn1:any;
+  linkedIn2:any;
+  linkedIn3:any;
+  linkedIn4:any;
+  linkedIn5:any;
+
+  yammer1:any;
+  yammer2:any;
+  yammer3:any;
+  yammer4:any;
+  yammer5:any;
+
 }

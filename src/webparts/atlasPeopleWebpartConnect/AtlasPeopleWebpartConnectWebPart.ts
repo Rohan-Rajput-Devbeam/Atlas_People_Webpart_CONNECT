@@ -20,55 +20,9 @@ import { PropertyFieldFilePicker, IPropertyFieldFilePickerProps, IFilePickerResu
 import { PropertyFieldCodeEditor, PropertyFieldCodeEditorLanguages } from '@pnp/spfx-property-controls/lib/PropertyFieldCodeEditor';
 
 import { PropertyFieldMultiSelect } from '@pnp/spfx-property-controls/lib/PropertyFieldMultiSelect';
+import { IAtlasPeopleWebpartConnectWebPartProps } from './IAtlasPeopleWebpartConnectWebPartProps';
 
 
-export interface IAtlasPeopleWebpartConnectWebPartProps {
-  description1: any;
-  description2: any;
-  description3: any;
-  description4: any;
-  description5: any;
-
-  filePickerResult1: any;
-  filePickerResult2: any;
-  filePickerResult3: any;
-  filePickerResult4: any;
-  filePickerResult5: any;
-
-  role1: any;
-  role2: any;
-  role3: any;
-  role4: any;
-  role5: any;
-
-
-  profileName1: any;
-  profileName2: any;
-  profileName3: any;
-  profileName4: any;
-  profileName5: any;
-
-  htmlCode1: any;
-
-  selectBrand1: any;
-  selectBrand2: any;
-  selectBrand3: any;
-  selectBrand4: any;
-  selectBrand5: any;
-
-  byline1: any;
-  byline2: any;
-  byline3: any;
-  byline4: any;
-  byline5: any;
-
-  collectionData1: any[];
-  collectionData2: any[];
-  collectionData3: any[];
-  collectionData4: any[];
-  collectionData5: any[];
-
-}
 
 export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebPart<IAtlasPeopleWebpartConnectWebPartProps> {
 
@@ -118,7 +72,44 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         collectionData2: this.properties.collectionData2,
         collectionData3: this.properties.collectionData3,
         collectionData4: this.properties.collectionData4,
-        collectionData5: this.properties.collectionData5
+        collectionData5: this.properties.collectionData5,
+
+        fb1: this.properties.fb1,
+        fb2: this.properties.fb2,
+        fb3: this.properties.fb3,
+        fb4: this.properties.fb4,
+        fb5: this.properties.fb5,
+
+        insta1: this.properties.insta1,
+        insta2: this.properties.insta2,
+        insta3: this.properties.insta3,
+        insta4: this.properties.insta4,
+        insta5: this.properties.insta5,
+
+        twitter1: this.properties.twitter1,
+        twitter2: this.properties.twitter2,
+        twitter3: this.properties.twitter3,
+        twitter4: this.properties.twitter4,
+        twitter5: this.properties.twitter5,
+
+        yt1: this.properties.yt1,
+        yt2: this.properties.yt2,
+        yt3: this.properties.yt3,        
+        yt4: this.properties.yt4,
+        yt5: this.properties.yt5,
+
+        linkedIn1: this.properties.linkedIn1,
+        linkedIn2: this.properties.linkedIn2,
+        linkedIn3: this.properties.linkedIn3,
+        linkedIn4: this.properties.linkedIn4,
+        linkedIn5: this.properties.linkedIn5,
+
+        yammer1: this.properties.yammer1,
+        yammer2: this.properties.yammer2,
+        yammer3: this.properties.yammer3,
+        yammer4: this.properties.yammer4,
+        yammer5: this.properties.yammer5,
+
 
       }
     );
@@ -148,19 +139,19 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         this.properties.description2 = newText;
         break;
       }
-      case 3:{
+      case 3: {
         this.properties.description3 = newText;
         break;
       }
-      case 4:{
+      case 4: {
         this.properties.description4 = newText;
         break;
       }
-      case 5:{
+      case 5: {
         this.properties.description5 = newText;
         break;
       }
-      default:{
+      default: {
         console.log("default--->")
       }
     }
@@ -217,27 +208,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyPaneTextField('fb1', {
                   label: "Facebook ID:",
-                  placeholder : "Enter your Facebook ID"
+                  placeholder: "Enter your Facebook ID"
                 }),
                 PropertyPaneTextField('insta1', {
                   label: "Instagram ID:",
-                  placeholder : "Enter your Instagram ID"
+                  placeholder: "Enter your Instagram ID"
                 }),
                 PropertyPaneTextField('twitter1', {
                   label: "Twitter Handle:",
-                  placeholder : "Enter your Twitter Handle"
+                  placeholder: "Enter your Twitter Handle"
                 }),
                 PropertyPaneTextField('yt1', {
                   label: "YoutubeChannel:",
-                  placeholder : "Enter your Youtube Channel"
+                  placeholder: "Enter your Youtube Channel"
                 }),
                 PropertyPaneTextField('linkedIn1', {
                   label: "LinkedIn Id:",
-                  placeholder : "Enter your LinkedIn Id"
+                  placeholder: "Enter your LinkedIn Id"
                 }),
                 PropertyPaneTextField('yammer1', {
                   label: "Yammer Id:",
-                  placeholder : "Enter your Yammer Id"
+                  placeholder: "Enter your Yammer Id"
                 }),
 
                 //collecshon denge idhaar
@@ -257,7 +248,7 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                         return (
                           React.createElement(RichText, { value: value = this.properties.description1, onChange: (text) => this.onTextChange(text, 1) }))
 
-                          
+
                       }
                     }
                   ],
@@ -306,27 +297,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyPaneTextField('fb2', {
                   label: "Facebook ID:",
-                  placeholder : "Enter your Facebook ID"
+                  placeholder: "Enter your Facebook ID"
                 }),
                 PropertyPaneTextField('insta2', {
                   label: "Instagram ID:",
-                  placeholder : "Enter your Instagram ID"
+                  placeholder: "Enter your Instagram ID"
                 }),
                 PropertyPaneTextField('twitter2', {
                   label: "Twitter Handle:",
-                  placeholder : "Enter your Twitter Handle"
+                  placeholder: "Enter your Twitter Handle"
                 }),
                 PropertyPaneTextField('yt2', {
                   label: "YoutubeChannel:",
-                  placeholder : "Enter your Youtube Channel"
+                  placeholder: "Enter your Youtube Channel"
                 }),
                 PropertyPaneTextField('linkedIn2', {
                   label: "LinkedIn Id:",
-                  placeholder : "Enter your LinkedIn Id"
+                  placeholder: "Enter your LinkedIn Id"
                 }),
                 PropertyPaneTextField('yammer2', {
                   label: "Yammer Id:",
-                  placeholder : "Enter your Yammer Id"
+                  placeholder: "Enter your Yammer Id"
                 }),
 
                 PropertyFieldFilePicker('filePicker2', {
@@ -399,27 +390,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyPaneTextField('fb3', {
                   label: "Facebook ID:",
-                  placeholder : "Enter your Facebook ID"
+                  placeholder: "Enter your Facebook ID"
                 }),
                 PropertyPaneTextField('insta3', {
                   label: "Instagram ID:",
-                  placeholder : "Enter your Instagram ID"
+                  placeholder: "Enter your Instagram ID"
                 }),
                 PropertyPaneTextField('twitter3', {
                   label: "Twitter Handle:",
-                  placeholder : "Enter your Twitter Handle"
+                  placeholder: "Enter your Twitter Handle"
                 }),
                 PropertyPaneTextField('yt3', {
                   label: "YoutubeChannel:",
-                  placeholder : "Enter your Youtube Channel"
+                  placeholder: "Enter your Youtube Channel"
                 }),
                 PropertyPaneTextField('linkedIn3', {
                   label: "LinkedIn Id:",
-                  placeholder : "Enter your LinkedIn Id"
+                  placeholder: "Enter your LinkedIn Id"
                 }),
                 PropertyPaneTextField('yammer3', {
                   label: "Yammer Id:",
-                  placeholder : "Enter your Yammer Id"
+                  placeholder: "Enter your Yammer Id"
                 }),
 
                 PropertyFieldFilePicker('filePicker3', {
@@ -492,27 +483,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
 
                 PropertyPaneTextField('fb4', {
                   label: "Facebook ID:",
-                  placeholder : "Enter your Facebook ID"
+                  placeholder: "Enter your Facebook ID"
                 }),
                 PropertyPaneTextField('insta4', {
                   label: "Instagram ID:",
-                  placeholder : "Enter your Instagram ID"
+                  placeholder: "Enter your Instagram ID"
                 }),
                 PropertyPaneTextField('twitter4', {
                   label: "Twitter Handle:",
-                  placeholder : "Enter your Twitter Handle"
+                  placeholder: "Enter your Twitter Handle"
                 }),
                 PropertyPaneTextField('yt4', {
                   label: "YoutubeChannel:",
-                  placeholder : "Enter your Youtube Channel"
+                  placeholder: "Enter your Youtube Channel"
                 }),
                 PropertyPaneTextField('linkedIn4', {
                   label: "LinkedIn Id:",
-                  placeholder : "Enter your LinkedIn Id"
+                  placeholder: "Enter your LinkedIn Id"
                 }),
                 PropertyPaneTextField('yammer4', {
                   label: "Yammer Id:",
-                  placeholder : "Enter your Yammer Id"
+                  placeholder: "Enter your Yammer Id"
                 }),
 
                 PropertyFieldFilePicker('filePicker4', {
@@ -584,27 +575,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyPaneTextField('fb5', {
                   label: "Facebook ID:",
-                  placeholder : "Enter your Facebook ID"
+                  placeholder: "Enter your Facebook ID"
                 }),
                 PropertyPaneTextField('insta5', {
                   label: "Instagram ID:",
-                  placeholder : "Enter your Instagram ID"
+                  placeholder: "Enter your Instagram ID"
                 }),
                 PropertyPaneTextField('twitter5', {
                   label: "Twitter Handle:",
-                  placeholder : "Enter your Twitter Handle"
+                  placeholder: "Enter your Twitter Handle"
                 }),
                 PropertyPaneTextField('yt5', {
                   label: "YoutubeChannel:",
-                  placeholder : "Enter your Youtube Channel"
+                  placeholder: "Enter your Youtube Channel"
                 }),
                 PropertyPaneTextField('linkedIn5', {
                   label: "LinkedIn Id:",
-                  placeholder : "Enter your LinkedIn Id"
+                  placeholder: "Enter your LinkedIn Id"
                 }),
                 PropertyPaneTextField('yammer5', {
                   label: "Yammer Id:",
-                  placeholder : "Enter your Yammer Id"
+                  placeholder: "Enter your Yammer Id"
                 }),
 
 
