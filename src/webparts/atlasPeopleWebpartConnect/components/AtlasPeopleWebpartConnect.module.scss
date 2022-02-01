@@ -164,7 +164,7 @@
         bottom: -355px !important;
         text-align: center;
         left: 0;
-        transition: 0.2s ease-in;
+        transition: 0.5s ease-in;
         background-color: rgba(0, 0, 0, 0.6);
         // width: 320px;
         max-width: 280px;
@@ -241,3 +241,29 @@ svg:hover{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 70%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 
 }
+
+.reqVisitBtn{
+    background-color: #CC0A0A !important;
+    border: 0px !important;
+    transition: .3s ease-out !important;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%) !important;
+    border-radius: 2px !important;
+
+    min-width: 6em !important;
+    padding: 7px 10px !important; 
+    color: #fff !important;
+
+    width: 180px !important;
+    margin-top: 25px !important;
+    margin-bottom: 10px !important;
+    margin-left: 17.5px !important;
+}
+
+.reqVisitBtn:hover{
+    background-color: #d84747 !important;
+
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+//class="btn btn-primary action-link"

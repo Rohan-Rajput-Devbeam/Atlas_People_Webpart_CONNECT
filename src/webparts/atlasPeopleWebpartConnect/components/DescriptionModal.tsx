@@ -48,6 +48,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                             <img src={this.props.dataset[3] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"
                                                 : this.props.dataset[3].fileAbsoluteUrl} className={styles.peoplePhoto}></img>
                                         </Card.Body>
+                                    <Button className={styles.reqVisitBtn} href="https://makersmarkdiplomatrequestdk.splashthat.com/" >Request Market Visit</Button>
                                     </Card>
                                     <br />
                                     <Row padding-top="10px">

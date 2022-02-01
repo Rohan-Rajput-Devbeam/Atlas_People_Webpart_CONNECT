@@ -292,9 +292,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   ],
                   //  selectedKey: 'American Wiskey',
                 }),
-                PropertyPaneTextField('description2', {
-                  label: "Description:",
-                }),
+                // PropertyPaneTextField('description2', {
+                //   label: "Description:",
+                // }),
                 PropertyPaneTextField('fb2', {
                   label: "Facebook ID:",
                   placeholder: "Enter your Facebook ID"
@@ -373,9 +373,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('byline3', {
                   label: "Byline:",
                 }),
-                PropertyPaneTextField('description3', {
-                  label: "Description:",
-                }),
+                // PropertyPaneTextField('description3', {
+                //   label: "Description:",
+                // }),
                 PropertyPaneDropdown('selectBrand3', {
                   label: 'Select Brand',
                   options: [
@@ -465,9 +465,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('byline4', {
                   label: "Byline:",
                 }),
-                PropertyPaneTextField('description4', {
-                  label: "Description:",
-                }),
+                // PropertyPaneTextField('description4', {
+                //   label: "Description:",
+                // }),
                 PropertyPaneDropdown('selectBrand4', {
                   label: 'Select Brand',
                   options: [
@@ -558,9 +558,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('byline5', {
                   label: "Byline:",
                 }),
-                PropertyPaneTextField('description5', {
-                  label: "Description:",
-                }),
+                // PropertyPaneTextField('description5', {
+                //   label: "Description:",
+                // }),
                 PropertyPaneDropdown('selectBrand5', {
                   label: 'Select Brand',
                   options: [
