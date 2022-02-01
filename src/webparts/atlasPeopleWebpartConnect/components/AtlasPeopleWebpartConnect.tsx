@@ -59,7 +59,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
     // this.setState({ showDescriptionModal: true });
     switch (id) {
       case 1:
-        dataset.push(this.props.profileName1, this.props.role1, this.props.byline1, this.props.filePickerResult1, this.props.description1, this.props.selectBrand1, this.props.fb1, this.props.insta1, this.props.linkedIn1, this.props.yammer1, this.props.yt1);
+        dataset.push(this.props.profileName1, this.props.role1, this.props.byline1, this.props.filePickerResult1, this.props.description1, this.props.selectBrand1, this.props.fb1, this.props.insta1, this.props.linkedIn1, this.props.yammer1, this.props.yt1, this.props.twitter1);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
@@ -67,28 +67,28 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
         break;
 
       case 2:
-        dataset.push(this.props.profileName2, this.props.role2, this.props.byline2, this.props.filePickerResult2, this.props.description2, this.props.selectBrand2, this.props.fb2, this.props.insta2, this.props.linkedIn2, this.props.yammer2, this.props.yt2);
+        dataset.push(this.props.profileName2, this.props.role2, this.props.byline2, this.props.filePickerResult2, this.props.description2, this.props.selectBrand2, this.props.fb2, this.props.insta2, this.props.linkedIn2, this.props.yammer2, this.props.yt2, this.props.twitter2);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 3:
-        dataset.push(this.props.profileName3, this.props.role3, this.props.byline3, this.props.filePickerResult3, this.props.description3, this.props.selectBrand3, this.props.fb3, this.props.insta3, this.props.linkedIn3, this.props.yammer3, this.props.yt3);
+        dataset.push(this.props.profileName3, this.props.role3, this.props.byline3, this.props.filePickerResult3, this.props.description3, this.props.selectBrand3, this.props.fb3, this.props.insta3, this.props.linkedIn3, this.props.yammer3, this.props.yt3, this.props.twitter3);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 4:
-        dataset.push(this.props.profileName4, this.props.role4, this.props.byline4, this.props.filePickerResult4, this.props.description4, this.props.selectBrand4, this.props.fb4, this.props.insta4, this.props.linkedIn4, this.props.yammer4, this.props.yt4);
+        dataset.push(this.props.profileName4, this.props.role4, this.props.byline4, this.props.filePickerResult4, this.props.description4, this.props.selectBrand4, this.props.fb4, this.props.insta4, this.props.linkedIn4, this.props.yammer4, this.props.yt4, this.props.twitter4);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 5:
-        dataset.push(this.props.profileName5, this.props.role5, this.props.byline5, this.props.filePickerResult5, this.props.description5, this.props.selectBrand5, this.props.fb5, this.props.insta5, this.props.linkedIn5, this.props.yammer5, this.props.yt5);
+        dataset.push(this.props.profileName5, this.props.role5, this.props.byline5, this.props.filePickerResult5, this.props.description5, this.props.selectBrand5, this.props.fb5, this.props.insta5, this.props.linkedIn5, this.props.yammer5, this.props.yt5, this.props.twitter5);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
