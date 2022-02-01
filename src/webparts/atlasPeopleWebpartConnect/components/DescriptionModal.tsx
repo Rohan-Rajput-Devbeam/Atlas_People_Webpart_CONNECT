@@ -44,22 +44,22 @@ export class DescriptionModal extends React.Component<any, any> {
                                         {/* <Card.Body style={{padding: 0, 'padding-left': '8%'}}> */}
                                         <Card.Body style={{ padding: '1%' }}>
                                             {/* <img src={programDetail.programPhoto} className={styles.programPhoto}></img> */}
-                                            <img src={this.props.dataset[2] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"
-                                                : this.props.dataset[2].fileAbsoluteUrl} className={styles.peoplePhoto}></img>
+                                            <img src={this.props.dataset[3] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"
+                                                : this.props.dataset[3].fileAbsoluteUrl} className={styles.peoplePhoto}></img>
                                         </Card.Body>
                                     </Card>
                                     <br />
                                     <Row>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="twitter" iconColor="#1DA1F2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="linkedin" iconColor="#0077b5" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="facebook" iconColor="#4267B2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
-                                        <Col sm={3}>
+                                        <Col xs={3} margin="auto">
                                             <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="youtube-play" iconColor="#FF0000" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                         </Col>
                                     </Row>
@@ -70,7 +70,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                     <h3>{this.props.dataset[0]}</h3>
                                     <p className={styles.subTitle}>{this.props.dataset[1]}</p>
                                     <p className={styles.description}>
-                                        <ReadMore>{this.props.dataset[3]}
+                                        <ReadMore>{this.props.dataset[4]}
                                         </ReadMore></p>
                                 </Col>
                             </Row>

@@ -3,6 +3,7 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
+  PropertyPaneDropdown,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
@@ -15,6 +16,8 @@ import { IAtlasPeopleWebpartConnectProps } from './components/IAtlasPeopleWebpar
 import { PropertyFieldFilePicker, IPropertyFieldFilePickerProps, IFilePickerResult } from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
 
 import { PropertyFieldCodeEditor, PropertyFieldCodeEditorLanguages } from '@pnp/spfx-property-controls/lib/PropertyFieldCodeEditor';
+
+import { PropertyFieldMultiSelect } from '@pnp/spfx-property-controls/lib/PropertyFieldMultiSelect';
 
 export interface IAtlasPeopleWebpartConnectWebPartProps {
   description1: any;
@@ -29,11 +32,11 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   filePickerResult4: any;
   filePickerResult5: any;
 
-  profileDesignation1: any;
-  profileDesignation2: any;
-  profileDesignation3: any;
-  profileDesignation4: any;
-  profileDesignation5: any;
+  role1: any;
+  role2: any;
+  role3: any;
+  role4: any;
+  role5: any;
 
 
   profileName1: any;
@@ -43,6 +46,19 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   profileName5: any;
 
   htmlCode1: any;
+
+  selectBrand1:any;
+  selectBrand2:any;
+  selectBrand3:any;
+  selectBrand4:any;
+  selectBrand5:any;
+
+  byline1:any;
+  byline2:any;
+  byline3:any;
+  byline4:any;
+  byline5:any;
+
 
 
 }
@@ -59,11 +75,11 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         description4: this.properties.description4,
         description5: this.properties.description5,
 
-        profileDesignation1: this.properties.profileDesignation1,
-        profileDesignation2: this.properties.profileDesignation2,
-        profileDesignation3: this.properties.profileDesignation3,
-        profileDesignation4: this.properties.profileDesignation4,
-        profileDesignation5: this.properties.profileDesignation5,
+        role1: this.properties.role1,
+        role2: this.properties.role2,
+        role3: this.properties.role3,
+        role4: this.properties.role4,
+        role5: this.properties.role5,
 
         profileName1: this.properties.profileName1,
         profileName2: this.properties.profileName2,
@@ -77,7 +93,22 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         filePickerResult4: this.properties.filePickerResult4,
         filePickerResult5: this.properties.filePickerResult5,
 
-        htmlCode1 : this.properties.htmlCode1
+        htmlCode1 : this.properties.htmlCode1,
+
+        selectBrand1 : this.properties.selectBrand1,
+        selectBrand2 : this.properties.selectBrand2,
+        selectBrand3 : this.properties.selectBrand3,
+        selectBrand4 : this.properties.selectBrand4,
+        selectBrand5 : this.properties.selectBrand5,
+
+        byline1 : this.properties.byline1,
+        byline2 : this.properties.byline2,
+        byline3 : this.properties.byline3,
+        byline4 : this.properties.byline4,
+        byline5 : this.properties.byline5,
+
+
+
       }
     );
 
@@ -107,8 +138,23 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('profileName1', {
                   label: "Name:",
                 }),
-                PropertyPaneTextField('profileDesignation1', {
-                  label: "Designation:",
+                PropertyPaneTextField('role1', {
+                  label: "Role:",
+                }),
+                PropertyPaneTextField('byline1', {
+                  label: "Byline:",
+                }),
+                PropertyPaneDropdown('selectBrand1', {
+                  label: 'Select Brand',
+                  options: [
+                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'Courvoisier', text: 'Courvoisier' },
+                    { key: 'Gin', text: 'Gin' },
+                    { key: 'House of Suntory', text: 'House of Suntory' },
+                    { key: 'Tequila', text: 'Tequila' },
+
+                  ],
+                  //  selectedKey: 'American Wiskey',
                 }),
                 PropertyPaneTextField('description1', {
                   label: "Description:",
@@ -158,8 +204,23 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('profileName2', {
                   label: "Name:",
                 }),
-                PropertyPaneTextField('profileDesignation2', {
-                  label: "Designation:",
+                PropertyPaneTextField('role2', {
+                  label: "Role:",
+                }),
+                PropertyPaneTextField('byline2', {
+                  label: "Byline:",
+                }),
+                PropertyPaneDropdown('selectBrand2', {
+                  label: 'Select Brand',
+                  options: [
+                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'Courvoisier', text: 'Courvoisier' },
+                    { key: 'Gin', text: 'Gin' },
+                    { key: 'House of Suntory', text: 'House of Suntory' },
+                    { key: 'Tequila', text: 'Tequila' },
+
+                  ],
+                  //  selectedKey: 'American Wiskey',
                 }),
                 PropertyPaneTextField('description2', {
                   label: "Description:",
@@ -192,11 +253,26 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('profileName3', {
                   label: "Name:",
                 }),
-                PropertyPaneTextField('profileDesignation3', {
-                  label: "Designation:",
+                PropertyPaneTextField('role3', {
+                  label: "Role:",
+                }),
+                PropertyPaneTextField('byline3', {
+                  label: "Byline:",
                 }),
                 PropertyPaneTextField('description3', {
                   label: "Description:",
+                }),
+                PropertyPaneDropdown('selectBrand3', {
+                  label: 'Select Brand',
+                  options: [
+                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'Courvoisier', text: 'Courvoisier' },
+                    { key: 'Gin', text: 'Gin' },
+                    { key: 'House of Suntory', text: 'House of Suntory' },
+                    { key: 'Tequila', text: 'Tequila' },
+
+                  ],
+                  //  selectedKey: 'American Wiskey',
                 }),
                 PropertyFieldFilePicker('filePicker3', {
                   context: this.context,
@@ -225,11 +301,26 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('profileName4', {
                   label: "Name:",
                 }),
-                PropertyPaneTextField('profileDesignation4', {
-                  label: "Designation:",
+                PropertyPaneTextField('role4', {
+                  label: "Role:",
+                }),
+                PropertyPaneTextField('byline4', {
+                  label: "Byline:",
                 }),
                 PropertyPaneTextField('description4', {
                   label: "Description:",
+                }),
+                PropertyPaneDropdown('selectBrand4', {
+                  label: 'Select Brand',
+                  options: [
+                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'Courvoisier', text: 'Courvoisier' },
+                    { key: 'Gin', text: 'Gin' },
+                    { key: 'House of Suntory', text: 'House of Suntory' },
+                    { key: 'Tequila', text: 'Tequila' },
+
+                  ],
+                  //  selectedKey: 'American Wiskey',
                 }),
                 PropertyFieldFilePicker('filePicker4', {
                   context: this.context,
@@ -258,11 +349,26 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('profileName5', {
                   label: "Name:",
                 }),
-                PropertyPaneTextField('profileDesignation5', {
+                PropertyPaneTextField('role5', {
                   label: "Role:",
+                }),
+                PropertyPaneTextField('byline5', {
+                  label: "Byline:",
                 }),
                 PropertyPaneTextField('description5', {
                   label: "Description:",
+                }),
+                PropertyPaneDropdown('selectBrand5', {
+                  label: 'Select Brand',
+                  options: [
+                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'Courvoisier', text: 'Courvoisier' },
+                    { key: 'Gin', text: 'Gin' },
+                    { key: 'House of Suntory', text: 'House of Suntory' },
+                    { key: 'Tequila', text: 'Tequila' },
+
+                  ],
+                  //  selectedKey: 'American Wiskey',
                 }),
                 PropertyFieldFilePicker('filePicker5', {
                   context: this.context,

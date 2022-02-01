@@ -22,11 +22,11 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   filePickerResult4: any;
   filePickerResult5: any;
 
-  profileDesignation1: any;
-  profileDesignation2: any;
-  profileDesignation3: any;
-  profileDesignation4: any;
-  profileDesignation5: any;
+  byline1: any;
+  byline2: any;
+  byline3: any;
+  byline4: any;
+  byline5: any;
 
   profileName1: any;
   profileName2: any;
@@ -59,7 +59,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
     // this.setState({ showDescriptionModal: true });
     switch (id) {
       case 1:
-        dataset.push(this.props.profileName1, this.props.profileDesignation1, this.props.filePickerResult1, this.props.description1);
+        dataset.push(this.props.profileName1, this.props.role1, this.props.byline1, this.props.filePickerResult1, this.props.description1);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
@@ -67,28 +67,28 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
         break;
 
       case 2:
-        dataset.push(this.props.profileName2, this.props.profileDesignation2, this.props.filePickerResult2, this.props.description2);
+        dataset.push(this.props.profileName2, this.props.role2, this.props.byline2, this.props.filePickerResult2, this.props.description2);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 3:
-        dataset.push(this.props.profileName3, this.props.profileDesignation3, this.props.filePickerResult3, this.props.description3);
+        dataset.push(this.props.profileName3, this.props.role3, this.props.byline3, this.props.filePickerResult3, this.props.description3);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 4:
-        dataset.push(this.props.profileName4, this.props.profileDesignation4, this.props.filePickerResult4, this.props.description4);
+        dataset.push(this.props.profileName4, this.props.role4, this.props.byline4, this.props.filePickerResult4, this.props.description4);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 5:
-        dataset.push(this.props.profileName5, this.props.profileDesignation5, this.props.filePickerResult5, this.props.description5);
+        dataset.push(this.props.profileName5, this.props.role5, this.props.byline5, this.props.filePickerResult5, this.props.description5);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
@@ -121,8 +121,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
   }
 
   public render(): React.ReactElement<IAtlasPeopleWebpartConnectProps> {
-    // console.log(this.props.profileName1);
-
+     console.log(this.props.selectBrand1);
+     console.log(this.props.selectBrand5);
+     console.log(this.props.description1);
 
 
     try {
@@ -161,7 +162,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={() => this.openModal(1)}>
                       <div className={styles.aboutpeople}  >
                         <h2>{this.props.profileName1}</h2>
-                        <h3 >{this.props.profileDesignation1}</h3>
+                        <h3 >{this.props.role1}</h3>
+                        <h3 >{this.props.byline1}</h3>
                         <h3 >{this.sliceStringWithWords(this.props.description1, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
@@ -199,7 +201,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={() => this.openModal(2)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName2}</h2>
-                        <h3>{this.props.profileDesignation2}</h3>
+                        <h3 >{this.props.role2}</h3>
+                        <h3>{this.props.byline2}</h3>
                         <h3>{this.sliceStringWithWords(this.props.description2, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
@@ -237,7 +240,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={() => this.openModal(3)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName3}</h2>
-                        <h3>{this.props.profileDesignation3}</h3>
+                        <h3 >{this.props.role3}</h3>
+                        <h3>{this.props.byline3}</h3>
                         <h3>{this.sliceStringWithWords(this.props.description3, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
@@ -270,7 +274,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={() => this.openModal(4)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName4}</h2>
-                        <h3>{this.props.profileDesignation4}</h3>
+                        <h3 >{this.props.role4}</h3>
+                        <h3>{this.props.byline4}</h3>
                         <h3>{this.sliceStringWithWords(this.props.description4, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
@@ -305,7 +310,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                     <div className={styles.card} onClick={() => this.openModal(5)}>
                       <div className={styles.aboutpeople} >
                         <h2>{this.props.profileName5}</h2>
-                        <h3>{this.props.profileDesignation5}</h3>
+                        <h3 >{this.props.role5}</h3>
+                        <h3>{this.props.byline5}</h3>
                         <h3>{this.sliceStringWithWords(this.props.description5, 150)}</h3>
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
