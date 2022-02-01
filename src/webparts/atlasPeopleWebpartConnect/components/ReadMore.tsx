@@ -3,13 +3,14 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
 import styles from './AtlasPeopleWebpartConnect.module.scss';
+import { RichText } from '@pnp/spfx-controls-react/lib/RichText';
 
 export class ReadMore extends React.Component<any, any> {
 
     constructor(props) {
         super(props);
         this.state = ({
-            isReadMore: true
+            isReadMore: false
         })
     }
     toggleReadMore = () => {
@@ -19,7 +20,7 @@ export class ReadMore extends React.Component<any, any> {
     }
     sliceStringWithWords = (inputString, limit) => {
         const newTitle = [];
-        if(!inputString || inputString == null || inputString==""){
+        if (!inputString || inputString == null || inputString == "" || inputString.length <= 150) {
             return inputString;
         }
         if (inputString.length > limit) {
@@ -30,7 +31,7 @@ export class ReadMore extends React.Component<any, any> {
                 return acc + cur.length;
             }, 0);
         }
-
+        console.log(newTitle)
         return `${newTitle.join(' ')} ...`
     }
     public render() {
@@ -38,18 +39,23 @@ export class ReadMore extends React.Component<any, any> {
         console.log(text)
 
         return (
-            <p className="text">
-                {/* abcd */}
-                {this.state.isReadMore ? 
-                // text.slice(0, 150) 
-                this.sliceStringWithWords(text,150)
-                : text}
+            <div className="text">
+
+                {this.state.isReadMore == false ?
+                    // text.slice(0, 150) 
+                    <RichText value={this.sliceStringWithWords(text, 150)} isEditMode={false} />
+
+                    :
+                    <RichText value={text} isEditMode={false} />
+
+
+                }
                 {text.length > 150 ?
                     <div onClick={this.toggleReadMore} className={styles.readMore}>
-                        {this.state.isReadMore ? "Read more" : "Read less"}
+                        {!this.state.isReadMore ? "Read more" : "Read less"}
                     </div>
                     : null}
-            </p>
+            </div>
         );
     }
 

@@ -39,4 +39,10 @@ export interface IAtlasPeopleWebpartConnectProps {
   byline4:any;
   byline5:any;
 
+  collectionData1: any[];
+  collectionData2: any[];
+  collectionData3: any[];
+  collectionData4: any[];
+  collectionData5: any[];
+
 }

@@ -12,12 +12,15 @@ import * as strings from 'AtlasPeopleWebpartConnectWebPartStrings';
 import AtlasPeopleWebpartConnect from './components/AtlasPeopleWebpartConnect';
 import { IAtlasPeopleWebpartConnectProps } from './components/IAtlasPeopleWebpartConnectProps';
 
+import { PropertyFieldCollectionData, CustomCollectionFieldType } from '@pnp/spfx-property-controls/lib/PropertyFieldCollectionData';
+import { RichText } from "@pnp/spfx-controls-react/lib/RichText";
 
 import { PropertyFieldFilePicker, IPropertyFieldFilePickerProps, IFilePickerResult } from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
 
 import { PropertyFieldCodeEditor, PropertyFieldCodeEditorLanguages } from '@pnp/spfx-property-controls/lib/PropertyFieldCodeEditor';
 
 import { PropertyFieldMultiSelect } from '@pnp/spfx-property-controls/lib/PropertyFieldMultiSelect';
+
 
 export interface IAtlasPeopleWebpartConnectWebPartProps {
   description1: any;
@@ -47,19 +50,23 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
 
   htmlCode1: any;
 
-  selectBrand1:any;
-  selectBrand2:any;
-  selectBrand3:any;
-  selectBrand4:any;
-  selectBrand5:any;
+  selectBrand1: any;
+  selectBrand2: any;
+  selectBrand3: any;
+  selectBrand4: any;
+  selectBrand5: any;
 
-  byline1:any;
-  byline2:any;
-  byline3:any;
-  byline4:any;
-  byline5:any;
+  byline1: any;
+  byline2: any;
+  byline3: any;
+  byline4: any;
+  byline5: any;
 
-
+  collectionData1: any[];
+  collectionData2: any[];
+  collectionData3: any[];
+  collectionData4: any[];
+  collectionData5: any[];
 
 }
 
@@ -93,21 +100,25 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         filePickerResult4: this.properties.filePickerResult4,
         filePickerResult5: this.properties.filePickerResult5,
 
-        htmlCode1 : this.properties.htmlCode1,
+        htmlCode1: this.properties.htmlCode1,
 
-        selectBrand1 : this.properties.selectBrand1,
-        selectBrand2 : this.properties.selectBrand2,
-        selectBrand3 : this.properties.selectBrand3,
-        selectBrand4 : this.properties.selectBrand4,
-        selectBrand5 : this.properties.selectBrand5,
+        selectBrand1: this.properties.selectBrand1,
+        selectBrand2: this.properties.selectBrand2,
+        selectBrand3: this.properties.selectBrand3,
+        selectBrand4: this.properties.selectBrand4,
+        selectBrand5: this.properties.selectBrand5,
 
-        byline1 : this.properties.byline1,
-        byline2 : this.properties.byline2,
-        byline3 : this.properties.byline3,
-        byline4 : this.properties.byline4,
-        byline5 : this.properties.byline5,
+        byline1: this.properties.byline1,
+        byline2: this.properties.byline2,
+        byline3: this.properties.byline3,
+        byline4: this.properties.byline4,
+        byline5: this.properties.byline5,
 
-
+        collectionData1: this.properties.collectionData1,
+        collectionData2: this.properties.collectionData2,
+        collectionData3: this.properties.collectionData3,
+        collectionData4: this.properties.collectionData4,
+        collectionData5: this.properties.collectionData5
 
       }
     );
@@ -123,6 +134,40 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
     return Version.parse('1.0');
   }
 
+  private onTextChange = (newText: string, id: number) => {
+    console.log(newText);
+    // newText = newText.replace(" bold ", " <strong>bold</strong> ");
+    // this.properties.description1 = newText;
+    console.log(this.properties.description1)
+    switch (id) {
+      case 1: {
+        this.properties.description1 = newText;
+        break;
+      }
+      case 2: {
+        this.properties.description2 = newText;
+        break;
+      }
+      case 3:{
+        this.properties.description3 = newText;
+        break;
+      }
+      case 4:{
+        this.properties.description4 = newText;
+        break;
+      }
+      case 5:{
+        this.properties.description5 = newText;
+        break;
+      }
+      default:{
+        console.log("default--->")
+      }
+    }
+
+
+    return newText;
+  }
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
@@ -156,9 +201,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   ],
                   //  selectedKey: 'American Wiskey',
                 }),
-                PropertyPaneTextField('description1', {
-                  label: "Description:",
-                }),
+                // PropertyPaneTextField('description1', {
+                //   label: "Description:",
+                // }),
                 PropertyFieldFilePicker('filePicker1', {
                   context: this.context,
                   filePickerResult: this.properties.filePickerResult1,
@@ -170,22 +215,56 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   buttonLabel: "File Picker",
                   label: "File Picker",
                 }),
-                PropertyFieldCodeEditor('htmlCode', {
-                  label: 'Edit HTML Code',
-                  panelTitle: 'Edit HTML Code',
-                  initialValue: this.properties.htmlCode1,
-                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
-                  properties: this.properties,
-                  disabled: false,
-                  key: 'codeEditorFieldId',
-                  language: PropertyFieldCodeEditorLanguages.HTML,
-                  options: {
-                    wrap: true,
-                    fontSize: 20,
-                    // more options
-                  }
+                PropertyPaneTextField('fb1', {
+                  label: "Facebook ID:",
+                  placeholder : "Enter your Facebook ID"
+                }),
+                PropertyPaneTextField('insta1', {
+                  label: "Instagram ID:",
+                  placeholder : "Enter your Instagram ID"
+                }),
+                PropertyPaneTextField('twitter1', {
+                  label: "Twitter Handle:",
+                  placeholder : "Enter your Twitter Handle"
+                }),
+                PropertyPaneTextField('yt1', {
+                  label: "YoutubeChannel:",
+                  placeholder : "Enter your Youtube Channel"
+                }),
+                PropertyPaneTextField('linkedIn1', {
+                  label: "LinkedIn Id:",
+                  placeholder : "Enter your LinkedIn Id"
+                }),
+                PropertyPaneTextField('yammer1', {
+                  label: "Yammer Id:",
+                  placeholder : "Enter your Yammer Id"
+                }),
+
+                //collecshon denge idhaar
+
+                PropertyFieldCollectionData("collectionData1", {
+                  key: "collectionData1",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData1,
+                  fields: [
+                    {
+                      id: "richTextField",
+                      title: "Rich Text Field",
+                      type: CustomCollectionFieldType.custom,
+                      onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
+                        return (
+                          React.createElement(RichText, { value: value = this.properties.description1, onChange: (text) => this.onTextChange(text, 1) }))
+
+                          
+                      }
+                    }
+                  ],
+                  disabled: false
                 })
 
+                //collecshon khatam idhaar
 
               ]
             }
@@ -225,6 +304,31 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('description2', {
                   label: "Description:",
                 }),
+                PropertyPaneTextField('fb2', {
+                  label: "Facebook ID:",
+                  placeholder : "Enter your Facebook ID"
+                }),
+                PropertyPaneTextField('insta2', {
+                  label: "Instagram ID:",
+                  placeholder : "Enter your Instagram ID"
+                }),
+                PropertyPaneTextField('twitter2', {
+                  label: "Twitter Handle:",
+                  placeholder : "Enter your Twitter Handle"
+                }),
+                PropertyPaneTextField('yt2', {
+                  label: "YoutubeChannel:",
+                  placeholder : "Enter your Youtube Channel"
+                }),
+                PropertyPaneTextField('linkedIn2', {
+                  label: "LinkedIn Id:",
+                  placeholder : "Enter your LinkedIn Id"
+                }),
+                PropertyPaneTextField('yammer2', {
+                  label: "Yammer Id:",
+                  placeholder : "Enter your Yammer Id"
+                }),
+
                 PropertyFieldFilePicker('filePicker2', {
                   context: this.context,
                   filePickerResult: this.properties.filePickerResult2,
@@ -235,6 +339,25 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   key: "filePickerId",
                   buttonLabel: "File Picker",
                   label: "File Picker",
+                }),
+                PropertyFieldCollectionData("collectionData2", {
+                  key: "collectionData2",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData2,
+                  fields: [
+                    {
+                      id: "richTextField",
+                      title: "Rich Text Field",
+                      type: CustomCollectionFieldType.custom,
+                      onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
+                        return (
+                          React.createElement(RichText, { value: value = this.properties.description2, onChange: (text) => this.onTextChange(text, 2) }))
+                      }
+                    }
+                  ],
+                  disabled: false
                 })
 
               ]
@@ -274,6 +397,31 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   ],
                   //  selectedKey: 'American Wiskey',
                 }),
+                PropertyPaneTextField('fb3', {
+                  label: "Facebook ID:",
+                  placeholder : "Enter your Facebook ID"
+                }),
+                PropertyPaneTextField('insta3', {
+                  label: "Instagram ID:",
+                  placeholder : "Enter your Instagram ID"
+                }),
+                PropertyPaneTextField('twitter3', {
+                  label: "Twitter Handle:",
+                  placeholder : "Enter your Twitter Handle"
+                }),
+                PropertyPaneTextField('yt3', {
+                  label: "YoutubeChannel:",
+                  placeholder : "Enter your Youtube Channel"
+                }),
+                PropertyPaneTextField('linkedIn3', {
+                  label: "LinkedIn Id:",
+                  placeholder : "Enter your LinkedIn Id"
+                }),
+                PropertyPaneTextField('yammer3', {
+                  label: "Yammer Id:",
+                  placeholder : "Enter your Yammer Id"
+                }),
+
                 PropertyFieldFilePicker('filePicker3', {
                   context: this.context,
                   filePickerResult: this.properties.filePickerResult3,
@@ -284,6 +432,25 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   key: "filePickerId",
                   buttonLabel: "File Picker",
                   label: "File Picker",
+                }),
+                PropertyFieldCollectionData("collectionData3", {
+                  key: "collectionData3",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData3,
+                  fields: [
+                    {
+                      id: "richTextField",
+                      title: "Rich Text Field",
+                      type: CustomCollectionFieldType.custom,
+                      onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
+                        return (
+                          React.createElement(RichText, { value: value = this.properties.description3, onChange: (text) => this.onTextChange(text, 3) }))
+                      }
+                    }
+                  ],
+                  disabled: false
                 })
               ]
             }
@@ -322,6 +489,32 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   ],
                   //  selectedKey: 'American Wiskey',
                 }),
+
+                PropertyPaneTextField('fb4', {
+                  label: "Facebook ID:",
+                  placeholder : "Enter your Facebook ID"
+                }),
+                PropertyPaneTextField('insta4', {
+                  label: "Instagram ID:",
+                  placeholder : "Enter your Instagram ID"
+                }),
+                PropertyPaneTextField('twitter4', {
+                  label: "Twitter Handle:",
+                  placeholder : "Enter your Twitter Handle"
+                }),
+                PropertyPaneTextField('yt4', {
+                  label: "YoutubeChannel:",
+                  placeholder : "Enter your Youtube Channel"
+                }),
+                PropertyPaneTextField('linkedIn4', {
+                  label: "LinkedIn Id:",
+                  placeholder : "Enter your LinkedIn Id"
+                }),
+                PropertyPaneTextField('yammer4', {
+                  label: "Yammer Id:",
+                  placeholder : "Enter your Yammer Id"
+                }),
+
                 PropertyFieldFilePicker('filePicker4', {
                   context: this.context,
                   filePickerResult: this.properties.filePickerResult4,
@@ -332,6 +525,25 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   key: "filePickerId",
                   buttonLabel: "File Picker",
                   label: "File Picker",
+                }),
+                PropertyFieldCollectionData("collectionData4", {
+                  key: "collectionData4",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData4,
+                  fields: [
+                    {
+                      id: "richTextField",
+                      title: "Rich Text Field",
+                      type: CustomCollectionFieldType.custom,
+                      onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
+                        return (
+                          React.createElement(RichText, { value: value = this.properties.description4, onChange: (text) => this.onTextChange(text, 4) }))
+                      }
+                    }
+                  ],
+                  disabled: false
                 })
               ]
             }
@@ -370,6 +582,32 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   ],
                   //  selectedKey: 'American Wiskey',
                 }),
+                PropertyPaneTextField('fb5', {
+                  label: "Facebook ID:",
+                  placeholder : "Enter your Facebook ID"
+                }),
+                PropertyPaneTextField('insta5', {
+                  label: "Instagram ID:",
+                  placeholder : "Enter your Instagram ID"
+                }),
+                PropertyPaneTextField('twitter5', {
+                  label: "Twitter Handle:",
+                  placeholder : "Enter your Twitter Handle"
+                }),
+                PropertyPaneTextField('yt5', {
+                  label: "YoutubeChannel:",
+                  placeholder : "Enter your Youtube Channel"
+                }),
+                PropertyPaneTextField('linkedIn5', {
+                  label: "LinkedIn Id:",
+                  placeholder : "Enter your LinkedIn Id"
+                }),
+                PropertyPaneTextField('yammer5', {
+                  label: "Yammer Id:",
+                  placeholder : "Enter your Yammer Id"
+                }),
+
+
                 PropertyFieldFilePicker('filePicker5', {
                   context: this.context,
                   filePickerResult: this.properties.filePickerResult5,
@@ -380,6 +618,25 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   key: "filePickerId",
                   buttonLabel: "File Picker",
                   label: "File Picker",
+                }),
+                PropertyFieldCollectionData("collectionData5", {
+                  key: "collectionData5",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData5,
+                  fields: [
+                    {
+                      id: "richTextField",
+                      title: "Rich Text Field",
+                      type: CustomCollectionFieldType.custom,
+                      onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
+                        return (
+                          React.createElement(RichText, { value: value = this.properties.description5, onChange: (text) => this.onTextChange(text, 5) }))
+                      }
+                    }
+                  ],
+                  disabled: false
                 })
               ]
             }

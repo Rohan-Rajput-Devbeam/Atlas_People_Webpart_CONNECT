@@ -10,6 +10,10 @@
     //     max-width: 20% !important;
     // }
 }
+:global(.ql-toolbar){
+    top: 0 !important;
+    left: 28% !important;
+  }
 
 :global(#workbenchPageContent) {
     font-family: "Oswald" !important;

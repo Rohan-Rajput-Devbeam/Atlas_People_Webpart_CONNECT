@@ -59,7 +59,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
     // this.setState({ showDescriptionModal: true });
     switch (id) {
       case 1:
-        dataset.push(this.props.profileName1, this.props.role1, this.props.byline1, this.props.filePickerResult1, this.props.description1);
+        dataset.push(this.props.profileName1, this.props.role1, this.props.byline1,this.props.filePickerResult1, this.props.description1, this.props.selectBrand1);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
@@ -67,28 +67,28 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
         break;
 
       case 2:
-        dataset.push(this.props.profileName2, this.props.role2, this.props.byline2, this.props.filePickerResult2, this.props.description2);
+        dataset.push(this.props.profileName2, this.props.role2, this.props.byline2, this.props.filePickerResult2, this.props.description2, this.props.selectBrand2);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 3:
-        dataset.push(this.props.profileName3, this.props.role3, this.props.byline3, this.props.filePickerResult3, this.props.description3);
+        dataset.push(this.props.profileName3, this.props.role3, this.props.byline3, this.props.filePickerResult3, this.props.description3, this.props.selectBrand3);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 4:
-        dataset.push(this.props.profileName4, this.props.role4, this.props.byline4, this.props.filePickerResult4, this.props.description4);
+        dataset.push(this.props.profileName4, this.props.role4, this.props.byline4, this.props.filePickerResult4, this.props.description4, this.props.selectBrand4);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
         })
         break;
       case 5:
-        dataset.push(this.props.profileName5, this.props.role5, this.props.byline5, this.props.filePickerResult5, this.props.description5);
+        dataset.push(this.props.profileName5, this.props.role5, this.props.byline5, this.props.filePickerResult5, this.props.description5, this.props.selectBrand5);
         await this.setState({
           currentDataset: dataset,
           showDescriptionModal: true
@@ -164,7 +164,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         <h2>{this.props.profileName1}</h2>
                         <h3 >{this.props.role1}</h3>
                         <h3 >{this.props.byline1}</h3>
-                        <h3 >{this.sliceStringWithWords(this.props.description1, 150)}</h3>
+                        <h3>{this.props.selectBrand1}</h3>
+
+                        {/* <h3 >{this.sliceStringWithWords(this.props.description1, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -203,7 +205,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         <h2>{this.props.profileName2}</h2>
                         <h3 >{this.props.role2}</h3>
                         <h3>{this.props.byline2}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description2, 150)}</h3>
+                        <h3>{this.props.selectBrand2}</h3>
+
+                        {/* <h3>{this.sliceStringWithWords(this.props.description2, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -242,7 +246,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         <h2>{this.props.profileName3}</h2>
                         <h3 >{this.props.role3}</h3>
                         <h3>{this.props.byline3}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description3, 150)}</h3>
+                        <h3>{this.props.selectBrand3}</h3>
+
+                        {/* <h3>{this.sliceStringWithWords(this.props.description3, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -276,7 +282,8 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         <h2>{this.props.profileName4}</h2>
                         <h3 >{this.props.role4}</h3>
                         <h3>{this.props.byline4}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description4, 150)}</h3>
+                        <h3>{this.props.selectBrand4}</h3>
+                        {/* <h3>{this.sliceStringWithWords(this.props.description4, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
@@ -312,7 +319,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         <h2>{this.props.profileName5}</h2>
                         <h3 >{this.props.role5}</h3>
                         <h3>{this.props.byline5}</h3>
-                        <h3>{this.sliceStringWithWords(this.props.description5, 150)}</h3>
+                        <h3>{this.props.selectBrand5}</h3>
+
+                        {/* <h3>{this.sliceStringWithWords(this.props.description5, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
