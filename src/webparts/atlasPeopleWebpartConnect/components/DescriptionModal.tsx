@@ -53,29 +53,33 @@ export class DescriptionModal extends React.Component<any, any> {
                                     <br />
                                     <Row padding-top="10px">
                                         {this.props.dataset[11] == "" || this.props.dataset[11] == null ? null :
-                                            <Col xs={3} margin="auto">
+                                            <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="twitter" iconColor="#1DA1F2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                             </Col>
                                         }
                                         {this.props.dataset[8] == "" || this.props.dataset[8] == null ? null :
-                                            <Col xs={3} margin="auto">
+                                            // <Col xs={3} margin="auto">
+                                            <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="linkedin" iconColor="#0077b5" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                             </Col>
                                         }
 
                                         {this.props.dataset[6] == "" || this.props.dataset[6] == null ? null :
-                                            <Col xs={3} margin="auto">
+                                            // <Col xs={3} margin="auto">
+                                            <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="facebook" iconColor="#4267B2" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                             </Col>
                                         }
 
                                         {this.props.dataset[10] == "" || this.props.dataset[10] == null ? null :
-                                            <Col xs={3} margin="auto">
+                                            // <Col xs={3} margin="auto">
+                                            <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="youtube-play" iconColor="#FF0000" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                             </Col>
                                         }
                                         {this.props.dataset[9] == "" || this.props.dataset[9] == null ? null :
-                                           <Col xs={3} margin="auto">
+                                        //    <Col xs={3} margin="auto">
+                                        <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                     viewBox="0 0 48 48" fill="#000000"
                                                     width="30px"
@@ -89,7 +93,8 @@ export class DescriptionModal extends React.Component<any, any> {
                                             </Col>
                                         }
                                         {this.props.dataset[7] == "" || this.props.dataset[7] == null ? null :
-                                            <Col xs={3} margin="auto">
+                                            // <Col xs={3} margin="auto">
+                                            <Col className="text-center" margin="auto" style={{padding : '2px'}}>
                                                 <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="instagram" iconColor="#FF0000" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url="#" size="30" />
                                             </Col>
                                         }
