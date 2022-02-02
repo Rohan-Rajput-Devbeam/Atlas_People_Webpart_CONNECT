@@ -183,14 +183,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneDropdown('selectBrand1', {
                   label: 'Select Brand',
                   options: [
-                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'American Whiskey', text: 'American Whiskey' },
                     { key: 'Courvoisier', text: 'Courvoisier' },
                     { key: 'Gin', text: 'Gin' },
                     { key: 'House of Suntory', text: 'House of Suntory' },
                     { key: 'Tequila', text: 'Tequila' },
 
                   ],
-                  //  selectedKey: 'American Wiskey',
+                  //  selectedKey: 'American Whiskey',
                 }),
                 // PropertyPaneTextField('description1', {
                 //   label: "Description:",
@@ -235,14 +235,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
 
                 PropertyFieldCollectionData("collectionData1", {
                   key: "collectionData1",
-                  label: "Collection data",
-                  panelHeader: "Collection data panel header",
-                  manageBtnLabel: "Manage collection data",
+                  label: "Edit Description",
+                  panelHeader: "Edit Description",
+                  manageBtnLabel: "Edit Description",
                   value: this.properties.collectionData1,
                   fields: [
                     {
                       id: "richTextField",
-                      title: "Rich Text Field",
+                      title: "Description",
                       type: CustomCollectionFieldType.custom,
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (
@@ -283,14 +283,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneDropdown('selectBrand2', {
                   label: 'Select Brand',
                   options: [
-                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'American Whiskey', text: 'American Whiskey' },
                     { key: 'Courvoisier', text: 'Courvoisier' },
                     { key: 'Gin', text: 'Gin' },
                     { key: 'House of Suntory', text: 'House of Suntory' },
                     { key: 'Tequila', text: 'Tequila' },
 
                   ],
-                  //  selectedKey: 'American Wiskey',
+                  //  selectedKey: 'American Whiskey',
                 }),
                 // PropertyPaneTextField('description2', {
                 //   label: "Description:",
@@ -333,14 +333,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyFieldCollectionData("collectionData2", {
                   key: "collectionData2",
-                  label: "Collection data",
-                  panelHeader: "Collection data panel header",
-                  manageBtnLabel: "Manage collection data",
+                  label: "Edit Description",
+                  panelHeader: "Edit Description",
+                  manageBtnLabel: "Edit Description",
                   value: this.properties.collectionData2,
                   fields: [
                     {
                       id: "richTextField",
-                      title: "Rich Text Field",
+                      title: "Description",
                       type: CustomCollectionFieldType.custom,
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (
@@ -379,14 +379,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneDropdown('selectBrand3', {
                   label: 'Select Brand',
                   options: [
-                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'American Whiskey', text: 'American Whiskey' },
                     { key: 'Courvoisier', text: 'Courvoisier' },
                     { key: 'Gin', text: 'Gin' },
                     { key: 'House of Suntory', text: 'House of Suntory' },
                     { key: 'Tequila', text: 'Tequila' },
 
                   ],
-                  //  selectedKey: 'American Wiskey',
+                  //  selectedKey: 'American Whiskey',
                 }),
                 PropertyPaneTextField('fb3', {
                   label: "Facebook ID:",
@@ -426,14 +426,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyFieldCollectionData("collectionData3", {
                   key: "collectionData3",
-                  label: "Collection data",
-                  panelHeader: "Collection data panel header",
-                  manageBtnLabel: "Manage collection data",
+                  label: "Edit Description",
+                  panelHeader: "Edit Description",
+                  manageBtnLabel: "Edit Description",
                   value: this.properties.collectionData3,
                   fields: [
                     {
                       id: "richTextField",
-                      title: "Rich Text Field",
+                      title: "Description",
                       type: CustomCollectionFieldType.custom,
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (
@@ -471,14 +471,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneDropdown('selectBrand4', {
                   label: 'Select Brand',
                   options: [
-                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'American Whiskey', text: 'American Whiskey' },
                     { key: 'Courvoisier', text: 'Courvoisier' },
                     { key: 'Gin', text: 'Gin' },
                     { key: 'House of Suntory', text: 'House of Suntory' },
                     { key: 'Tequila', text: 'Tequila' },
 
                   ],
-                  //  selectedKey: 'American Wiskey',
+                  //  selectedKey: 'American Whiskey',
                 }),
 
                 PropertyPaneTextField('fb4', {
@@ -519,14 +519,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyFieldCollectionData("collectionData4", {
                   key: "collectionData4",
-                  label: "Collection data",
-                  panelHeader: "Collection data panel header",
-                  manageBtnLabel: "Manage collection data",
+                  label: "Edit Description",
+                  panelHeader: "Edit Description",
+                  manageBtnLabel: "Edit Description",
                   value: this.properties.collectionData4,
                   fields: [
                     {
                       id: "richTextField",
-                      title: "Rich Text Field",
+                      title: "Description",
                       type: CustomCollectionFieldType.custom,
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (
@@ -564,14 +564,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneDropdown('selectBrand5', {
                   label: 'Select Brand',
                   options: [
-                    { key: 'American Wiskey', text: 'American Wiskey' },
+                    { key: 'American Whiskey', text: 'American Whiskey' },
                     { key: 'Courvoisier', text: 'Courvoisier' },
                     { key: 'Gin', text: 'Gin' },
                     { key: 'House of Suntory', text: 'House of Suntory' },
                     { key: 'Tequila', text: 'Tequila' },
 
                   ],
-                  //  selectedKey: 'American Wiskey',
+                  //  selectedKey: 'American Whiskey',
                 }),
                 PropertyPaneTextField('fb5', {
                   label: "Facebook ID:",
@@ -612,14 +612,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 }),
                 PropertyFieldCollectionData("collectionData5", {
                   key: "collectionData5",
-                  label: "Collection data",
-                  panelHeader: "Collection data panel header",
-                  manageBtnLabel: "Manage collection data",
+                  label: "Edit Description",
+                  panelHeader: "Edit Description",
+                  manageBtnLabel: "Edit Description",
                   value: this.properties.collectionData5,
                   fields: [
                     {
                       id: "richTextField",
-                      title: "Rich Text Field",
+                      title: "Description",
                       type: CustomCollectionFieldType.custom,
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (

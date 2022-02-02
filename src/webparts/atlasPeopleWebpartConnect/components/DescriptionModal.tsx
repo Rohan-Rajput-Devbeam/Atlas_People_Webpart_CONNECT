@@ -33,7 +33,7 @@ export class DescriptionModal extends React.Component<any, any> {
             // <h3></h3>
             <>
                 <Modal show={this.state.isOpen} onHide={this.closeModal} keyboard={false} size="lg">
-                    <Modal.Header className={styles.modalHeader} closeButton closeVariant='white'>
+                    <Modal.Header className={styles.modalHeader} closeButton>
                         <Modal.Title>{this.props.dataset[0]}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>

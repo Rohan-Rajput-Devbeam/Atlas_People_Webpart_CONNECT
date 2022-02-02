@@ -10,10 +10,26 @@
     //     max-width: 20% !important;
     // }
 }
-:global(.ql-toolbar){
+:global(.ql-toolbar) {
     top: 0 !important;
     left: 28% !important;
-  }
+}
+
+:global(.close) {
+    color: white !important;
+    opacity: 1 !important;
+}
+:global(button[class*="addBtn"]) {
+    display: none !important;
+}
+
+:global(p[class*="noCollectionData"]) {
+    display: none !important;
+}
+
+:global(.ql-container.ql-snow) {
+    border: 2px solid #ccc !important;
+}
 
 :global(#workbenchPageContent) {
     font-family: "Oswald" !important;
@@ -27,7 +43,7 @@
     width: 100%;
 }
 
-:global(.row){
+:global(.row) {
     margin: 0 !important;
 }
 
@@ -191,9 +207,9 @@
     width: 215px;
     height: 250px;
     padding: 0;
-   // border: 3px solid #555;
+    // border: 3px solid #555;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 70%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-   //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .subTitle {
     // @include ms-font-l;
@@ -207,50 +223,48 @@
     // @include ms-fontColor-white;
 }
 
-.readMore{
+.readMore {
     //content: "Read more";
-    color: #CC0A0A;
+    color: #cc0a0a;
     left: 30%;
     position: absolute;
     bottom: -7px;
     cursor: pointer;
 }
 
-.readMore:hover{
+.readMore:hover {
     color: #a50a0a;
     font-size: large;
 }
 
-.modalHeader{
-    padding:10px !important;
+.modalHeader {
+    padding: 10px !important;
     background-color: #cc0a0a;
-    color:#fff;
+    color: #fff;
     margin-right: -1px;
-
 }
 
-svg{
+svg {
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     transition: transform 250ms;
     border-radius: 30%;
     background-color: rgb(255, 255, 255);
 }
 
-svg:hover{
+svg:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 70%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-
 }
 
-.reqVisitBtn{
-    background-color: #CC0A0A !important;
+.reqVisitBtn {
+    background-color: #cc0a0a !important;
     border: 0px !important;
-    transition: .3s ease-out !important;
+    transition: 0.3s ease-out !important;
     box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%) !important;
     border-radius: 2px !important;
 
     min-width: 6em !important;
-    padding: 7px 10px !important; 
+    padding: 7px 10px !important;
     color: #fff !important;
 
     width: 180px !important;
@@ -259,7 +273,7 @@ svg:hover{
     margin-left: 17.5px !important;
 }
 
-.reqVisitBtn:hover{
+.reqVisitBtn:hover {
     background-color: #d84747 !important;
 
     color: #fff !important;
