@@ -81,4 +81,16 @@ export interface IAtlasPeopleWebpartConnectProps {
   yammer4:any;
   yammer5:any;
 
+  buttonHyperlink1:any;
+  buttonHyperlink2:any;
+  buttonHyperlink3:any;
+  buttonHyperlink4:any;
+  buttonHyperlink5:any;
+
+  buttonText1:any;
+  buttonText2:any;
+  buttonText3:any;
+  buttonText4:any;
+  buttonText5:any;
+
 }

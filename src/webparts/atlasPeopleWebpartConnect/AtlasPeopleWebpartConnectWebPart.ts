@@ -94,7 +94,7 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
 
         yt1: this.properties.yt1,
         yt2: this.properties.yt2,
-        yt3: this.properties.yt3,        
+        yt3: this.properties.yt3,
         yt4: this.properties.yt4,
         yt5: this.properties.yt5,
 
@@ -109,6 +109,18 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         yammer3: this.properties.yammer3,
         yammer4: this.properties.yammer4,
         yammer5: this.properties.yammer5,
+
+        buttonHyperlink1: this.properties.buttonHyperlink1,
+        buttonHyperlink2: this.properties.buttonHyperlink2,
+        buttonHyperlink3: this.properties.buttonHyperlink3,
+        buttonHyperlink4: this.properties.buttonHyperlink4,
+        buttonHyperlink5: this.properties.buttonHyperlink5,
+
+        buttonText1: this.properties.buttonText1,
+        buttonText2: this.properties.buttonText2,
+        buttonText3: this.properties.buttonText3,
+        buttonText4: this.properties.buttonText4,
+        buttonText5: this.properties.buttonText5,
 
 
       }
@@ -230,6 +242,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
+                PropertyPaneTextField('buttonText1', {
+                  label: "Button Text:",
+                  placeholder: "Enter Text For Button."
+                }),
+                PropertyPaneTextField('buttonHyperlink1', {
+                  label: "Button Hyperlink:",
+                  placeholder: "Enter Hyperlink For Button."
+                }),
 
                 //collecshon denge idhaar
 
@@ -318,6 +338,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('yammer2', {
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
+                }),
+                PropertyPaneTextField('buttonText2', {
+                  label: "Button Text:",
+                  placeholder: "Enter Text For Button."
+                }),
+                PropertyPaneTextField('buttonHyperlink2', {
+                  label: "Button Hyperlink:",
+                  placeholder: "Enter Hyperlink For Button."
                 }),
 
                 PropertyFieldFilePicker('filePicker2', {
@@ -412,6 +440,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
+                PropertyPaneTextField('buttonText3', {
+                  label: "Button Text:",
+                  placeholder: "Enter Text For Button."
+                }),
+                PropertyPaneTextField('buttonHyperlink3', {
+                  label: "Button Hyperlink:",
+                  placeholder: "Enter Hyperlink For Button."
+                }),
 
                 PropertyFieldFilePicker('filePicker3', {
                   context: this.context,
@@ -505,6 +541,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
+                PropertyPaneTextField('buttonText4', {
+                  label: "Button Text:",
+                  placeholder: "Enter Text For Button."
+                }),
+                PropertyPaneTextField('buttonHyperlink4', {
+                  label: "Button Hyperlink:",
+                  placeholder: "Enter Hyperlink For Button."
+                }),
 
                 PropertyFieldFilePicker('filePicker4', {
                   context: this.context,
@@ -596,6 +640,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                 PropertyPaneTextField('yammer5', {
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
+                }),
+                PropertyPaneTextField('buttonText5', {
+                  label: "Button Text:",
+                  placeholder: "Enter Text For Button."
+                }),
+                PropertyPaneTextField('buttonHyperlink5', {
+                  label: "Button Hyperlink:",
+                  placeholder: "Enter Hyperlink For Button."
                 }),
 
 
