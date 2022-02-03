@@ -92,4 +92,10 @@ export interface IAtlasPeopleWebpartConnectWebPartProps {
   buttonText4: any;
   buttonText5: any;
 
+  buttonCollectionData1 : any;
+  buttonCollectionData2: any;
+  buttonCollectionData3 : any;
+  buttonCollectionData4 : any;
+  buttonCollectionData5 : any;
+
 }

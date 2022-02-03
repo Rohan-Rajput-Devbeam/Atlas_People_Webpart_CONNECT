@@ -122,6 +122,12 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
         buttonText4: this.properties.buttonText4,
         buttonText5: this.properties.buttonText5,
 
+        buttonCollectionData1 : this.properties.buttonCollectionData1,
+        buttonCollectionData2: this.properties.buttonCollectionData2,
+        buttonCollectionData3 : this.properties.buttonCollectionData3,
+        buttonCollectionData4 : this.properties.buttonCollectionData4,
+        buttonCollectionData5 : this.properties.buttonCollectionData5
+
 
       }
     );
@@ -267,15 +273,35 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                       onCustomRender: (field, value, onUpdate, item, itemId, onError) => {
                         return (
                           React.createElement(RichText, { value: value = this.properties.description1, onChange: (text) => this.onTextChange(text, 1) }))
-
-
                       }
                     }
                   ],
                   disabled: false
-                })
+                }),
 
                 //collecshon khatam idhaar
+
+                PropertyFieldCollectionData("buttonCollectionData1", {
+                  key: "buttonCollectionData1",
+                  label: "Configure Custom Buttons",
+                  panelHeader: "Configure Custom Buttons",
+                  manageBtnLabel: "Configure Custom Buttons",
+                  value: this.properties.buttonCollectionData1,
+                  fields: [
+                    {
+                      id: "BtnTitle",
+                      title: "Button Title",
+                      type: CustomCollectionFieldType.string,
+                      required: true
+                    },
+                    {
+                      id: "BtnURL",
+                      title: "Button URL",
+                      type: CustomCollectionFieldType.string
+                    }
+                  ],
+                  disabled: false
+                })
 
               ]
             }
@@ -374,6 +400,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                         return (
                           React.createElement(RichText, { value: value = this.properties.description2, onChange: (text) => this.onTextChange(text, 2) }))
                       }
+                    }
+                  ],
+                  disabled: false
+                }),
+                PropertyFieldCollectionData("buttonCollectionData2", {
+                  key: "buttonCollectionData2",
+                  label: "Configure Custom Buttons",
+                  panelHeader: "Configure Custom Buttons",
+                  manageBtnLabel: "Configure Custom Buttons",
+                  value: this.properties.buttonCollectionData2,
+                  fields: [
+                    {
+                      title: "Button Title",
+                      id: "BtnTitle",
+                      type: CustomCollectionFieldType.string,
+                      required: true
+                    },
+                    {
+                      id: "BtnURL",
+                      title: "Button URL",
+                      type: CustomCollectionFieldType.string
                     }
                   ],
                   disabled: false
@@ -478,6 +525,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                     }
                   ],
                   disabled: false
+                }),
+                PropertyFieldCollectionData("buttonCollectionData3", {
+                  key: "buttonCollectionData3",
+                  label: "Configure Custom Buttons",
+                  panelHeader: "Configure Custom Buttons",
+                  manageBtnLabel: "Configure Custom Buttons",
+                  value: this.properties.buttonCollectionData3,
+                  fields: [
+                    {
+                      title: "Button Title",
+                      id: "BtnTitle",
+                      type: CustomCollectionFieldType.string,
+                      required: true
+                    },
+                    {
+                      id: "BtnURL",
+                      title: "Button URL",
+                      type: CustomCollectionFieldType.string
+                    }
+                  ],
+                  disabled: false
                 })
               ]
             }
@@ -576,6 +644,27 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                         return (
                           React.createElement(RichText, { value: value = this.properties.description4, onChange: (text) => this.onTextChange(text, 4) }))
                       }
+                    }
+                  ],
+                  disabled: false
+                }),
+                PropertyFieldCollectionData("buttonCollectionData4", {
+                  key: "buttonCollectionData4",
+                  label: "Configure Custom Buttons",
+                  panelHeader: "Configure Custom Buttons",
+                  manageBtnLabel: "Configure Custom Buttons",
+                  value: this.properties.buttonCollectionData4,
+                  fields: [
+                    {
+                      title: "Button Title",
+                      id: "BtnTitle",
+                      type: CustomCollectionFieldType.string,
+                      required: true
+                    },
+                    {
+                      id: "BtnURL",
+                      title: "Button URL",
+                      type: CustomCollectionFieldType.string
                     }
                   ],
                   disabled: false
@@ -680,18 +769,33 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                     }
                   ],
                   disabled: false
+                }),
+                PropertyFieldCollectionData("buttonCollectionData5", {
+                  key: "buttonCollectionData5",
+                  label: "Configure Custom Buttons",
+                  panelHeader: "Configure Custom Buttons",
+                  manageBtnLabel: "Configure Custom Buttons",
+                  value: this.properties.buttonCollectionData5,
+                  fields: [
+                    {
+                      title: "Button Title",
+                      id: "BtnTitle",
+                      type: CustomCollectionFieldType.string,
+                      required: true
+                    },
+                    {
+                      title: "Button URL",
+                      id: "BtnURL",
+                      type: CustomCollectionFieldType.string
+                    }
+                  ],
+                  disabled: false
                 })
               ]
             }
           ]
         },
-
-
-
-
       ]
-
-
     };
   }
 }

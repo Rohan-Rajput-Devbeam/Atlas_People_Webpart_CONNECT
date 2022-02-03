@@ -19,13 +19,13 @@
     color: white !important;
     opacity: 1 !important;
 }
-:global(button[class*="addBtn"]) {
-    display: none !important;
-}
+// :global(button[class*="addBtn"]) {
+//     display: none !important;
+// }
 
-:global(p[class*="noCollectionData"]) {
-    display: none !important;
-}
+// :global(p[class*="noCollectionData"]) {
+//     display: none !important;
+// }
 
 :global(.ql-container.ql-snow) {
     border: 2px solid #ccc !important;
