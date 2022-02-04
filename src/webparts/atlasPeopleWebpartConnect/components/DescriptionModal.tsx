@@ -45,16 +45,20 @@ export class DescriptionModal extends React.Component<any, any> {
                                         {/* <Card.Body style={{padding: 0, 'padding-left': '8%'}}> */}
                                         <Card.Body style={{ padding: '1%' }}>
                                             {/* <img src={programDetail.programPhoto} className={styles.programPhoto}></img> */}
-                                            <img src={this.props.dataset[3] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"
+                                            <img src={this.props.dataset[3] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"
                                                 : this.props.dataset[3].fileAbsoluteUrl} className={styles.peoplePhoto}></img>
                                         </Card.Body>
                                         {this.props.dataset[12] == "" || this.props.dataset[12] == null ? null :
                                             <Button className={styles.reqVisitBtn} href={this.props.dataset[13]} >{this.props.dataset[12]}</Button>
                                         }
-                                        {console.log(this.props.dataset)}
-                                        {this.props.dataset[14].map((buttonDetail, i) => (
-                                            <Button className={styles.reqVisitBtn} href={buttonDetail.BtnURL}>{buttonDetail.BtnTitle}</Button>
-                                        ))}
+                                        {this.props.dataset[14] ?
+                                            <>
+                                                {this.props.dataset[14].map((buttonDetail, i) => (
+                                                    <Button className={styles.reqVisitBtn} href={buttonDetail.BtnURL}>{buttonDetail.BtnTitle}</Button>
+                                                ))}
+                                            </>
+                                            : null}
+
                                     </Card>
                                     <br />
                                     <Row padding-top="10px">

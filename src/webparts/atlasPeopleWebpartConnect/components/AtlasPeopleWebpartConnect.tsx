@@ -148,7 +148,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
         {/* <div className="container-fluid"> */}
         {/* <div onClick={this.openModal}>abcd</div> */}
         <Container fluid>
-          <p>{this.props.htmlCode1}</p>
+          {/* <p>{this.props.htmlCode1}</p> */}
           {/* <div dangerouslySetInnerHTML={{ __html: this.props.htmlCode1 }} /> */}
           {/* <div className={styles.container}> */}
           <div className={styles.box}>
@@ -170,7 +170,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image1 != null && image1 != "" ? image1 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image1 != null && image1 != "" ? image1 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
 
                     </div>
 
@@ -213,7 +213,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image2 != null && image2 != "" ? image2 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image2 != null && image2 != "" ? image2 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
 
                     </div>
 
@@ -255,7 +255,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image3 != null && image3 != "" ? image3 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image3 != null && image3 != "" ? image3 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
                     </div>
                   </div>
                   {/* </div> */}
@@ -292,7 +292,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image4 != null && image4 != "" ? image4 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image4 != null && image4 != "" ? image4 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
 
                     </div>
                   </div>
@@ -331,7 +331,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image5 != null && image5 != "" ? image5 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/Logo/Icons/people-profile-placeholder.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image5 != null && image5 != "" ? image5 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
 
                     </div>
                   </div>
