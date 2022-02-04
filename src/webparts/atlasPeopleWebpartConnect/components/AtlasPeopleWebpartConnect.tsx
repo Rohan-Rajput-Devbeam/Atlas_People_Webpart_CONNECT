@@ -128,17 +128,44 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
     try {
       // Set Image URL received from the file picker component--->
-      const myObj1 = (this.props.filePickerResult1);
+      var myObj1 = (this.props.filePickerResult1);
       var image1 = myObj1.fileAbsoluteUrl;
-      const myObj2 = (this.props.filePickerResult2);
-      var image2 = myObj2.fileAbsoluteUrl;
-      const myObj3 = (this.props.filePickerResult3);
-      var image3 = myObj3.fileAbsoluteUrl;
-      const myObj4 = (this.props.filePickerResult4);
-      var image4 = myObj4.fileAbsoluteUrl;
-      const myObj5 = (this.props.filePickerResult5);
-      var image5 = myObj5.fileAbsoluteUrl;
     }
+    catch (err) {
+      // console.error(err);
+
+    }
+    try {
+      var myObj2 = (this.props.filePickerResult2);
+      var image2 = myObj2.fileAbsoluteUrl;
+    }
+    catch (err) {
+      // console.error(err);
+
+    }
+    try {
+      var myObj3 = (this.props.filePickerResult3);
+      var image3 = myObj3.fileAbsoluteUrl;
+    }
+    catch (err) {
+      // console.error(err);
+
+    }
+    try {
+      var myObj4 = (this.props.filePickerResult4);
+      var image4 = myObj4.fileAbsoluteUrl;
+    }
+    catch (err) {
+      // console.error(err);
+
+    }
+    try {
+      var myObj5 = (this.props.filePickerResult5);
+      var image5 = myObj5.fileAbsoluteUrl;
+      console.log(image5)
+    }
+
+
     catch (err) {
       // console.error(err);
 
@@ -171,6 +198,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
                       <div className={styles.image}> <img src={image1 != null && image1 != "" ? image1 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
+                      <div className={styles.personMove}></div>
 
                     </div>
 
@@ -179,7 +207,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   {/* </div> */}
                 </Col>
                 :
-                
+
                 <Col className={styles.myColl}></Col>
                 // <Col className={styles.myColl} lg md={6}>
                 //   {/* <di v className={styles['box-cell']}> */}
@@ -214,6 +242,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
                       <div className={styles.image}> <img src={image2 != null && image2 != "" ? image2 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
+                      <div className={styles.personMove}></div>
 
                     </div>
 
@@ -256,13 +285,14 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
                       <div className={styles.image}> <img src={image3 != null && image3 != "" ? image3 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
+                      <div className={styles.personMove}></div>
                     </div>
                   </div>
                   {/* </div> */}
                 </Col>
                 :
                 <Col className={styles.myColl}></Col>
-                
+
                 // <Col className={styles.myColl} lg md={6}>
                 //   {/* <di v className={styles['box-cell']}> */}
                 //   <div className={styles.wrapper}>
@@ -293,7 +323,7 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
                       <div className={styles.image}> <img src={image4 != null && image4 != "" ? image4 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
-
+                      <div className={styles.personMove}></div>
                     </div>
                   </div>
                   {/* </div> */}
@@ -331,7 +361,9 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
                       </div>
-                      <div className={styles.image}> <img src={image5 != null && image5 != "" ? image5 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" /> </div>
+                      <div className={styles.image}> <img src={image5 != null && image5 != "" ? image5 : "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"} width="300" />
+                      </div>
+                      <div className={styles.personMove}></div>
 
                     </div>
                   </div>
