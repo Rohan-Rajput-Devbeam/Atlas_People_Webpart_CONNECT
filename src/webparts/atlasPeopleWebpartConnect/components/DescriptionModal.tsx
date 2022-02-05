@@ -92,7 +92,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                             <Col className="text-center" margin="auto" style={{ padding: '2px' }}
                                             // onClick={location.href=`https://www.yammer.com/${this.props.dataset[9]}/`}
                                             >
-                                                <a href={`https://www.yammer.com/${this.props.dataset[9]}/`}>
+                                                <a target='_blank' href={`https://www.yammer.com/${this.props.dataset[9]}/`} >
                                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                         viewBox="0 0 48 48" fill="#000000"
                                                         width="30px"
