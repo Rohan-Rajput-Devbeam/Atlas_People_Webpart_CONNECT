@@ -143,6 +143,19 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
     return Version.parse('1.0');
   }
 
+  private validateBtnText(value: string): string {
+    if (value === null ||
+      value.trim().length === 0) {
+      return 'Provide a Button Name';
+    }
+
+    if (value.length > 25) {
+      return 'Button text should not be longer than 25 characters';
+    }
+
+    return '';
+  }
+
   private onTextChange = (newText: string, id: number) => {
     console.log(newText);
     // newText = newText.replace(" bold ", " <strong>bold</strong> ");
@@ -248,14 +261,15 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
-                PropertyPaneTextField('buttonText1', {
-                  label: "Button Text:",
-                  placeholder: "Enter Text For Button."
-                }),
-                PropertyPaneTextField('buttonHyperlink1', {
-                  label: "Button Hyperlink:",
-                  placeholder: "Enter Hyperlink For Button."
-                }),
+                // PropertyPaneTextField('buttonText1', {
+                //   label: "Button Text:",
+                //   placeholder: "Enter Text For Button.",
+                //   maxLength:25
+                // }),
+                // PropertyPaneTextField('buttonHyperlink1', {
+                //   label: "Button Hyperlink:",
+                //   placeholder: "Enter Hyperlink For Button."
+                // }),
 
                 //collecshon denge idhaar
 
@@ -287,12 +301,16 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   panelHeader: "Configure Custom Buttons",
                   manageBtnLabel: "Configure Custom Buttons",
                   value: this.properties.buttonCollectionData1,
+              
+                  
                   fields: [
                     {
                       id: "BtnTitle",
                       title: "Button Title",
                       type: CustomCollectionFieldType.string,
-                      required: true
+                      required: true,
+                      onGetErrorMessage:this.validateBtnText.bind(this)
+
                     },
                     {
                       id: "BtnURL",
@@ -365,14 +383,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
-                PropertyPaneTextField('buttonText2', {
-                  label: "Button Text:",
-                  placeholder: "Enter Text For Button."
-                }),
-                PropertyPaneTextField('buttonHyperlink2', {
-                  label: "Button Hyperlink:",
-                  placeholder: "Enter Hyperlink For Button."
-                }),
+                // PropertyPaneTextField('buttonText2', {
+                //   label: "Button Text:",
+                //   placeholder: "Enter Text For Button."
+                // }),
+                // PropertyPaneTextField('buttonHyperlink2', {
+                //   label: "Button Hyperlink:",
+                //   placeholder: "Enter Hyperlink For Button."
+                // }),
 
                 PropertyFieldFilePicker('filePicker2', {
                   context: this.context,
@@ -415,7 +433,9 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                       title: "Button Title",
                       id: "BtnTitle",
                       type: CustomCollectionFieldType.string,
-                      required: true
+                      required: true,
+                      onGetErrorMessage:this.validateBtnText.bind(this)
+
                     },
                     {
                       id: "BtnURL",
@@ -487,14 +507,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
-                PropertyPaneTextField('buttonText3', {
-                  label: "Button Text:",
-                  placeholder: "Enter Text For Button."
-                }),
-                PropertyPaneTextField('buttonHyperlink3', {
-                  label: "Button Hyperlink:",
-                  placeholder: "Enter Hyperlink For Button."
-                }),
+                // PropertyPaneTextField('buttonText3', {
+                //   label: "Button Text:",
+                //   placeholder: "Enter Text For Button."
+                // }),
+                // PropertyPaneTextField('buttonHyperlink3', {
+                //   label: "Button Hyperlink:",
+                //   placeholder: "Enter Hyperlink For Button."
+                // }),
 
                 PropertyFieldFilePicker('filePicker3', {
                   context: this.context,
@@ -537,7 +557,8 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                       title: "Button Title",
                       id: "BtnTitle",
                       type: CustomCollectionFieldType.string,
-                      required: true
+                      required: true,
+                      onGetErrorMessage:this.validateBtnText.bind(this)
                     },
                     {
                       id: "BtnURL",
@@ -609,14 +630,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
-                PropertyPaneTextField('buttonText4', {
-                  label: "Button Text:",
-                  placeholder: "Enter Text For Button."
-                }),
-                PropertyPaneTextField('buttonHyperlink4', {
-                  label: "Button Hyperlink:",
-                  placeholder: "Enter Hyperlink For Button."
-                }),
+                // PropertyPaneTextField('buttonText4', {
+                //   label: "Button Text:",
+                //   placeholder: "Enter Text For Button."
+                // }),
+                // PropertyPaneTextField('buttonHyperlink4', {
+                //   label: "Button Hyperlink:",
+                //   placeholder: "Enter Hyperlink For Button."
+                // }),
 
                 PropertyFieldFilePicker('filePicker4', {
                   context: this.context,
@@ -659,7 +680,8 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                       title: "Button Title",
                       id: "BtnTitle",
                       type: CustomCollectionFieldType.string,
-                      required: true
+                      required: true,
+                      onGetErrorMessage:this.validateBtnText.bind(this)
                     },
                     {
                       id: "BtnURL",
@@ -730,14 +752,14 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                   label: "Yammer Id:",
                   placeholder: "Enter your Yammer Id"
                 }),
-                PropertyPaneTextField('buttonText5', {
-                  label: "Button Text:",
-                  placeholder: "Enter Text For Button."
-                }),
-                PropertyPaneTextField('buttonHyperlink5', {
-                  label: "Button Hyperlink:",
-                  placeholder: "Enter Hyperlink For Button."
-                }),
+                // PropertyPaneTextField('buttonText5', {
+                //   label: "Button Text:",
+                //   placeholder: "Enter Text For Button."
+                // }),
+                // PropertyPaneTextField('buttonHyperlink5', {
+                //   label: "Button Hyperlink:",
+                //   placeholder: "Enter Hyperlink For Button."
+                // }),
 
 
                 PropertyFieldFilePicker('filePicker5', {
@@ -781,7 +803,8 @@ export default class AtlasPeopleWebpartConnectWebPart extends BaseClientSideWebP
                       title: "Button Title",
                       id: "BtnTitle",
                       type: CustomCollectionFieldType.string,
-                      required: true
+                      required: true,
+                      onGetErrorMessage:this.validateBtnText.bind(this)
                     },
                     {
                       title: "Button URL",

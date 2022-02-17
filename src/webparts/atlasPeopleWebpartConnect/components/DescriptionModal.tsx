@@ -70,7 +70,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                         {this.props.dataset[8] == "" || this.props.dataset[8] == null ? null :
                                             // <Col xs={3} margin="auto">
                                             <Col className="text-center" margin="auto" style={{ padding: '2px' }}>
-                                                <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="linkedin" iconColor="#0077b5" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url={`https://www.linkedin.com/${this.props.dataset[8]}/`} size="30" />
+                                                <SocialMediaIconsReact borderColor="rgba(0,0,0,0)" borderWidth="4" borderStyle="groove" icon="linkedin" iconColor="#0077b5" backgroundColor="rgba(255,255,255,1)" iconSize="3" roundness="30%" url={`https://www.linkedin.com/in/${this.props.dataset[8]}/`} size="30" />
                                             </Col>
                                         }
 
@@ -118,9 +118,9 @@ export class DescriptionModal extends React.Component<any, any> {
 
                                 <Col lg={8} style={{ padding: '20px' }}>
                                     {/* <span className={styles.title}>{programDetail.title}</span> */}
-                                    <h3>{this.props.dataset[0]}</h3>
+                                    <h3 style={{fontFamily: "Oswald"}}>{this.props.dataset[0]}</h3>
                                     <p className={styles.subTitle}>{this.props.dataset[1]}</p>
-                                    <p>{this.props.dataset[5]}</p>
+                                    <p className={styles.subTitle}>{this.props.dataset[5]}</p>
                                     <p className={styles.description}>
                                         <ReadMore>{this.props.dataset[4]}
                                         </ReadMore></p>
