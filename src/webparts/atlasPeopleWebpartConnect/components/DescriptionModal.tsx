@@ -45,7 +45,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                         {/* <Card.Body style={{padding: 0, 'padding-left': '8%'}}> */}
                                         <Card.Body style={{ padding: '1%', marginBottom:'10px' }}>
                                             {/* <img src={programDetail.programPhoto} className={styles.programPhoto}></img> */}
-                                            <img src={this.props.dataset[3] === undefined ? "https://devbeam.sharepoint.com/sites/ModernConnect/SiteAssets/person-icon.png"
+                                            <img src={this.props.dataset[3] === undefined ? "https://bgsw1.sharepoint.com/sites/CONNECTII/SiteAssets/person-icon.png"
                                                 : this.props.dataset[3].fileAbsoluteUrl} className={styles.peoplePhoto}></img>
                                         </Card.Body>
                                         {this.props.dataset[12] == "" || this.props.dataset[12] == null ? null :
