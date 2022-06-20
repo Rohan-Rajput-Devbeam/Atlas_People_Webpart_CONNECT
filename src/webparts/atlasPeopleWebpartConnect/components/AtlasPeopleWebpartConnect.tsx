@@ -188,10 +188,10 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(1)}>
                       <div className={styles.aboutpeople}  >
-                        <h2>{this.props.profileName1}</h2>
-                        <h3 >{this.props.role1}</h3>
-                        <h3 >{this.props.byline1}</h3>
-                        <h3>{this.props.selectBrand1}</h3>
+                        <h2  className={styles.h2people}>{this.props.profileName1}</h2>
+                        <h3 className={styles.h3people}>{this.props.role1}</h3>
+                        <h3 className={styles.h3people}>{this.props.byline1}</h3>
+                        <h3 className={styles.h3people}>{this.props.selectBrand1}</h3>
 
                         {/* <h3 >{this.sliceStringWithWords(this.props.description1, 150)}</h3> */}
 
@@ -232,10 +232,10 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(2)}>
                       <div className={styles.aboutpeople} >
-                        <h2>{this.props.profileName2}</h2>
-                        <h3 >{this.props.role2}</h3>
-                        <h3>{this.props.byline2}</h3>
-                        <h3>{this.props.selectBrand2}</h3>
+                        <h2 className={styles.h2people}>{this.props.profileName2}</h2>
+                        <h3 className={styles.h3people} >{this.props.role2}</h3>
+                        <h3 className={styles.h3people}>{this.props.byline2}</h3>
+                        <h3 className={styles.h3people}>{this.props.selectBrand2}</h3>
 
                         {/* <h3>{this.sliceStringWithWords(this.props.description2, 150)}</h3> */}
 
@@ -275,10 +275,10 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(3)}>
                       <div className={styles.aboutpeople} >
-                        <h2>{this.props.profileName3}</h2>
-                        <h3 >{this.props.role3}</h3>
-                        <h3>{this.props.byline3}</h3>
-                        <h3>{this.props.selectBrand3}</h3>
+                        <h2 className={styles.h2people}>{this.props.profileName3}</h2>
+                        <h3 className={styles.h3people} >{this.props.role3}</h3>
+                        <h3 className={styles.h3people}>{this.props.byline3}</h3>
+                        <h3 className={styles.h3people}>{this.props.selectBrand3}</h3>
 
                         {/* <h3>{this.sliceStringWithWords(this.props.description3, 150)}</h3> */}
 
@@ -314,10 +314,10 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(4)}>
                       <div className={styles.aboutpeople} >
-                        <h2>{this.props.profileName4}</h2>
-                        <h3 >{this.props.role4}</h3>
-                        <h3>{this.props.byline4}</h3>
-                        <h3>{this.props.selectBrand4}</h3>
+                        <h2 className={styles.h2people}>{this.props.profileName4}</h2>
+                        <h3 className={styles.h3people} >{this.props.role4}</h3>
+                        <h3 className={styles.h3people}>{this.props.byline4}</h3>
+                        <h3 className={styles.h3people}>{this.props.selectBrand4}</h3>
                         {/* <h3>{this.sliceStringWithWords(this.props.description4, 150)}</h3> */}
 
                         {/* <button className={styles.buynow}>Buy Now</button> */}
@@ -352,10 +352,10 @@ export default class AtlasPeopleWebpartConnect extends React.Component<IAtlasPeo
                   <div className={styles.wrapper}>
                     <div className={styles.card} onClick={() => this.openModal(5)}>
                       <div className={styles.aboutpeople} >
-                        <h2>{this.props.profileName5}</h2>
-                        <h3 >{this.props.role5}</h3>
-                        <h3>{this.props.byline5}</h3>
-                        <h3>{this.props.selectBrand5}</h3>
+                        <h2 className={styles.h2people}>{this.props.profileName5}</h2>
+                        <h3 className={styles.h3people} >{this.props.role5}</h3>
+                        <h3 className={styles.h3people}>{this.props.byline5}</h3>
+                        <h3 className={styles.h3people}>{this.props.selectBrand5}</h3>
 
                         {/* <h3>{this.sliceStringWithWords(this.props.description5, 150)}</h3> */}
 

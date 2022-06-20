@@ -32,7 +32,8 @@ export class DescriptionModal extends React.Component<any, any> {
         return (
             // <h3></h3>
             <>
-                <Modal show={this.state.isOpen} onHide={this.closeModal} keyboard={false} size="lg">
+        
+                <Modal className={styles.atlasPeopleWebpartConnect} show={this.state.isOpen} onHide={this.closeModal} keyboard={false} size="lg">
                     <Modal.Header className={styles.modalHeader} closeButton>
                         <Modal.Title></Modal.Title>
                     </Modal.Header>
@@ -120,7 +121,7 @@ export class DescriptionModal extends React.Component<any, any> {
                                     {/* <span className={styles.title}>{programDetail.title}</span> */}
                                     <h3 style={{fontFamily: "Oswald"}}>{this.props.dataset[0]}</h3>
                                     <p className={styles.subTitle}>{this.props.dataset[1]}</p>
-                                    <p className={styles.subTitle}>{this.props.dataset[5]}</p>
+                                    <p className={styles.subTitle}>{this.props.dataset[2]}</p>
                                     <p className={styles.description}>
                                         <ReadMore>{this.props.dataset[4]}
                                         </ReadMore></p>
@@ -134,6 +135,7 @@ export class DescriptionModal extends React.Component<any, any> {
                         </Button>
                     </Modal.Footer>
                 </Modal>
+               
             </>
         );
     }

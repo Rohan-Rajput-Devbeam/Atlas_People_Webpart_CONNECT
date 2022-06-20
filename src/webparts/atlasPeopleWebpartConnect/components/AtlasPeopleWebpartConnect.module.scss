@@ -18,6 +18,8 @@
 :global(.close) {
     color: white !important;
     opacity: 1 !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
 }
 // :global(button[class*="addBtn"]) {
 //     display: none !important;
@@ -193,19 +195,21 @@
         bottom: 0px !important;
     }
 
-    h2 {
+    .h2people {
         font-family: "Oswald" !important;
 
         font-size: 25px;
         margin-top: 10px;
     }
 
-    h3 {
+    .h3people {
         font-family: "Oswald" !important;
         font-size: 20px;
-        margin-top: 70px;
+        // margin-top: 70px;
+        margin-top: 55px;
+
     }
-}
+
 .peoplePhoto {
     width: 215px;
     height: 250px;
@@ -299,3 +303,4 @@ svg:hover {
 }
 
 //class="btn btn-primary action-link"
+}
